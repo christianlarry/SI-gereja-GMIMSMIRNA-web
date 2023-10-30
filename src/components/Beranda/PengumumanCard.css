@@ -1,0 +1,117 @@
+.pengumuman-card{
+  display: flex;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.pengumuman-card > span:first-child{
+  font-size: 6rem;
+  position: absolute;
+  bottom: -18px;
+  right: 0px;
+  transform: scaleX(-1) rotate(-45deg);
+  color: rgba(0, 0, 0, 0.05);
+}
+
+.pengumuman-datetime{
+  font-size: 14px;
+  margin-right: 25px;
+  position: relative;
+  z-index: 10;
+}
+
+.pengumuman-datetime::after{
+  content: '';
+  width: 8px;
+  height: 20px;
+  border-radius: 5px;
+  display: block;
+  background-color: rgb(255, 234, 238);
+  position: absolute;
+  top: -10px;
+  left: 20px;
+}
+
+.pengumuman-datetime::before{
+  content: '';
+  width: 8px;
+  height: 20px;
+  border-radius: 5px;
+  display: block;
+  background-color: rgb(255, 234, 238);
+  position: absolute;
+  top: -10px;
+  right: 20px;
+}
+
+.pengumuman-datetime .pengumuman-date{
+  text-align: center;
+  background-color: rgb(255, 234, 238);
+  padding: 20px 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 1.1rem;
+  color: var(--red-primary);
+  width: 95px;
+}
+
+.pengumuman-datetime .pengumuman-time{
+  text-align: center;
+  padding: 5px 0;
+  background-color: #e20535;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.pengumuman-datetime .pengumuman-time > p{
+  font-family: "Poppins", sans-serif;
+}
+
+.pengumuman-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  width: 400px;
+  height: 110px;
+  position: relative;
+  z-index: 10;
+}
+
+.pengumuman-title h1{
+  font-size: 1.2rem;
+  font-weight: 700;
+  word-wrap: break-word;
+  width: 100%;
+  font-family: var(--font-family-primary);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 1300px){
+  .pengumuman-title h1{
+      font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  #pengumuman .pengumuman-datetime{
+      display: none;
+  }
+
+  .pengumuman-title h1{
+      font-size: 14px;
+  }
+}

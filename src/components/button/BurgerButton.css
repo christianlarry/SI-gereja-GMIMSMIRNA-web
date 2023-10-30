@@ -1,0 +1,31 @@
+.burger-btn{
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.burger-btn-line{
+  width: 25px;
+  height: 2px;
+  background-color: var(--black);
+  transition: 0.4s;
+  position: relative;
+  top: 0;
+}
+
+.burger-btn.active .burger-btn-line:first-child{
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+.burger-btn.active .burger-btn-line:nth-child(2){
+  opacity: 0;
+  transform: scale(0);
+}
+
+.burger-btn.active .burger-btn-line:last-child{
+  transform: rotate(-45deg);
+  top: -8px;
+}

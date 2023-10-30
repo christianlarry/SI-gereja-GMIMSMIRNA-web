@@ -1,0 +1,145 @@
+/* ===== HERO SECTION ====== */
+
+
+
+/* Swiper Button */
+
+/* .hero-btn{
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: 43%;
+  transition: 0.4s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.hero-btn:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero-container:hover .hero-swiper-next{
+  right: 17%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.hero-container:hover .hero-swiper-prev{
+  left: 17%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.hero-btn i{
+  color: #e0e0e0;
+  font-size: 1.3rem;
+}
+
+.hero-swiper-next{
+  right: 14%;
+  z-index: 900;
+}
+
+.hero-swiper-prev{  
+  left: 14%;
+  z-index: 900;
+}
+
+@media only screen and (max-width: 1025px){
+  .hero-btn{
+      display: none;
+  }
+} */
+
+/* Hero Content */
+
+.hero-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 800;
+  top: 25%;
+  left: 0;
+  right: 0;
+}
+
+.hero-content .logo img{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.hero-content .text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.hero-content .text h1{
+  font-size: 3em;
+}
+
+.hero-content .text h3{
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.hero-content .category{
+  margin-top: 100px;
+}
+
+.hero-content .category-menu{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-content .category-menu > Button{
+  width: 150px;
+}
+
+.hero-content .category-menu a{
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  font-family: "Poppins",sans-serif;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.hero-content .category-menu a i{
+  padding-right: 6px;
+}
+
+@media only screen and (max-width: 768px){
+  .hero-content .text{
+      font-size: 13px;
+  }
+
+  .hero-content .category-menu{
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .hero-content .category-menu Button{
+      width: 130px;
+  }
+
+  .hero-content .category-menu a{
+      font-size: 12px;
+  }
+}

@@ -1,0 +1,44 @@
+.struktur-bpmj{
+  width: 100%;
+  background-image: linear-gradient(rgba(2, 15, 39, 0.85), rgba(2, 15, 39, 0.85), rgba(2, 15, 39, 0.85)), url('/images/hero/hero_bg_2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.struktur-bpmj .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.struktur-bpmj-wrapper{
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.struktur-bpmj-title{
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.struktur-bpmj-title h2{
+  text-transform: uppercase;
+  font-size: 2.4rem;
+}
+
+.struktur-bpmj-lists{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.struktur-bpmj-list-item{
+  width: 300px;
+  padding: 1rem;
+  color: var(--white);
+}

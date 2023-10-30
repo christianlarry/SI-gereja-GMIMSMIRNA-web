@@ -1,0 +1,23 @@
+.paragraph{
+  display: block;
+  font-size: 16px;
+  white-space: pre-wrap;
+  font-family: inherit,sans-serif;
+}
+
+.paragraph-white{color: var(--white);}
+.paragraph-black{color: var(--black);}
+.paragraph-gray{color: var(--text-gray);}
+.paragraph-dark-gray{color: var(--text-dark-gray);}
+
+@media only screen and (max-width: 800px){
+  .paragraph{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .paragraph{
+    font-size: 11px;
+  }
+}

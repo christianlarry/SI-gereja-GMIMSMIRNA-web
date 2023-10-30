@@ -1,0 +1,16 @@
+.section-title{
+  font-size: 2rem;
+  font-family: var(--font-family-primary),sans-serif;
+}
+
+@media only screen and (max-width:1000px){
+  .section-title{
+    font-size: 1.6rem !important;
+  }
+}
+
+@media only screen and (max-width:500px){
+  .section-title{
+    font-size: 1.3rem !important;
+  }
+}

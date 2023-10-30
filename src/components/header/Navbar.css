@@ -1,0 +1,200 @@
+/* Main Navigation -start*/
+
+.main-navbar .nav-search-box{
+    display: block;
+}
+
+/* Main Navigation -end*/
+
+.navbar{
+    height: 70px;
+    transition: 0.3s;
+    /* background-color: aliceblue; */
+}
+
+.navbar *:not(i,svg,path){
+    color: var(--white);
+}
+
+.navbar.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
+}
+
+.navbar.sticky .dropdown-menus{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+}
+
+.navbar.sticky .nav-logo h1 span, .navbar.sticky .nav-list-items > a, .navbar.sticky .nav-list-items > a span{
+    color: var(--black);
+}
+
+.navbar.sticky .nav-list-items > a:hover{
+    color: var(--red-primary);
+}
+
+.nav-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+
+/* nav search btn */
+
+.nav-search-box{
+    display: none;
+}
+
+.nav-search-btn{
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-search-btn button{
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: inherit;
+}
+
+.nav-search-btn button i{
+    color: var(--black);
+}
+
+.nav-search-form{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--white);
+    padding: 0 1rem;
+    color: var(--black);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.nav-search-form.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-search-form form{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.nav-search-form form input{
+    width: 80%;
+    outline: none;
+    border: none;
+    color: var(--black);
+    font-size: 1rem;
+    font-family: var(--font-family-primary);
+}
+
+.nav-search-form form .btn-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-search-form form .btn-wrapper button{
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.nav-search-form form .btn-wrapper button i{
+    color: var(--black);
+    font-size: 1.4rem;
+}
+
+.nav-search-form form .close-btn i{
+    color: var(--red-primary) !important;
+}
+
+@media only screen and (max-width: 1025px) {
+    .burger-btn{
+        display: flex;
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .nav-search-box{
+        display: block;
+    }
+
+    .topbar{
+        display: none;
+    }
+
+    .navbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 995;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
+    }
+    
+    .navbar .nav-logo h1 span{
+        color: var(--black);
+    }
+
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        position: absolute;
+        left: -70%;
+        top: 70px;
+        background-color: var(--white);
+        min-height: calc(100vh - 70px);
+        width: 70%;
+        overflow-y: auto;
+        transition: 0.6s ease-in-out;
+        opacity: 0;
+    }
+
+    .nav-links.active{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .nav-links{
+        width: 100%;
+        left: -100%;
+    }
+
+    .nav-logo > a img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-logo > a h1{
+        font-size: 1.6rem;
+        line-height: 20px;
+    }
+}

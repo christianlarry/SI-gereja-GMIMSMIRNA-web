@@ -1,0 +1,99 @@
+.topbar{
+    /* background-color: aliceblue; */
+    border-bottom: 1px solid var(--topbar-border-color);
+}
+
+.topbar-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.topbar-address{
+    display: flex;
+    align-items: center;
+    font-family: var(--font-family-primary);
+    font-size: 14px;
+}
+
+.topbar-address i{
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+.topbar-address a,.topbar-address i, .topbar-search-btn i{
+    color: var(--white);
+}
+
+.topbar-social{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.topbar-social-links{
+    display: flex;
+    margin-right: 3rem;
+}
+
+.topbar-social-links li{
+    padding: 0 1rem;
+    border-right: 1px solid var(--topbar-border-color);
+}
+
+.topbar-social-links li:first-child{
+    border-left: 1px solid var(--topbar-border-color);
+}
+
+.topbar-social-links li a{
+    font-size: 1.2rem;
+    position: relative;
+    top: 23%;
+    display: block;
+    width: 25px;
+    text-align: center;
+    transition: 0.3s;
+    color: var(--white);
+}
+
+.topbar-social-links li:nth-child(1) a:hover i{
+    color: var(--facebook);
+}
+
+.topbar-social-links li:nth-child(2) a:hover i{
+    color: var(--instagram);
+}
+
+.topbar-social-links li:nth-child(3) a:hover i{
+    color: var(--youtube);
+}
+
+.topbar-social-links li:nth-child(4) a:hover i{
+    color: var(--mail);
+}
+
+.topbar-social .topbar-search{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.topbar-search-btn{
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.topbar-search-btn i{
+    padding: 8px;
+    border-radius: 50%;
+    background-color: rgba(191, 10, 49, 0.5);
+    transition: 0.3s;
+}
+
+.topbar-search-btn i:hover{
+    background-color: rgba(191, 10, 49, 0.862);
+}

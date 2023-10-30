@@ -1,0 +1,56 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+html{scroll-behavior: smooth;}
+
+body{
+    background-color: var(--bg-color);
+    color: #000000;
+    font-family: var(--font-family-secondary);
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+body.modal-active{overflow: hidden;}
+
+ul,li,a{text-decoration: none;list-style: none;color: var(--black);}
+h1,h2,h3,h4,h5,h6{font-family: var(--font-family-primary);}
+a,p{font-family: var(--font-family-secondary);}
+
+.container{max-width: 1300px;margin: 0 auto;padding: 0 1rem;}
+.h-full{height: 100%;}
+.transition-fast{transition: 0.2s;}
+.margin-center{margin-left: auto;margin-right: auto;}
+.text-white{color: var(--white) !important;}
+.text-gray{color: var(--text-gray) !important;}
+.text-primary{color: var(--red-primary) !important;}
+.font-family-primary{font-family: var(--font-family-primary);}
+
+.smirna-btn{
+    background: none;
+    border: none;
+    padding: 10px;
+    color: var(--white);
+    background-color: var(--red-primary);
+    font-family: var(--font-family-primary);
+    transition: 0.3s;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.smirna-btn.btn-sm{padding: 7px 10px;}
+.smirna-btn:hover{background-color: var(--red-primary-hover);}
+
+/* SWIPER BULLET */
+.swiper-bullet{
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: solid 2px #cfcfcf;
+    display: block;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.swiper-bullet-active{background-color: var(--red-primary);border: solid 2px var(--red-primary);}

@@ -1,0 +1,34 @@
+.profile-card-rounded-img{
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: block;
+  margin: 0 auto;
+}
+
+.profile-card-rounded-name{
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: var(--font-family-secondary),sans-serif;
+}
+
+.profile-card-rounded-desc{
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+  font-family: var(--font-family-primary),sans-serif;
+  color: #cfcfcf;
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px){
+  .profile-card-rounded-name{
+    font-size: 15px;
+  }
+  
+  .profile-card-rounded-desc{
+    font-size: 13px;
+  }
+}

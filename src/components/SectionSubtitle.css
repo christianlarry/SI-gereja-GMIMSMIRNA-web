@@ -1,0 +1,21 @@
+.section-subtitle{
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--red-primary);
+  font-family: var(--font-family-secondary),sans-serif;
+  padding-bottom: 5px;
+  display: block;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width:1000px){
+  .section-subtitle{
+    font-size: 14px !important;
+  }
+}
+
+@media only screen and (max-width:500px){
+  .section-subtitle{
+    font-size: 12px !important;
+  }
+}

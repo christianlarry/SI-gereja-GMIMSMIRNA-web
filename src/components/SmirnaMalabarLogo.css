@@ -1,0 +1,31 @@
+.smirna-malabar-logo a{
+    display: flex;
+    align-items: center;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.smirna-malabar-logo a img{
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+
+.smirna-malabar-logo a h1{
+    line-height: 26px;
+    font-size: 2rem;
+    color: #e20535;
+}
+
+.smirna-malabar-logo a h1 span{
+    display: block;
+    color: #fff;
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 500px){
+    .smirna-malabar-logo{
+        transform: scale(0.7);
+    }
+}

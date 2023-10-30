@@ -1,0 +1,43 @@
+.underline-text-button{
+  background: none;
+  border: none;
+  font-family: "Poppins",sans-serif;
+  font-weight: 500;
+  color: var(--red-primary);
+  transition: 0.4s;
+  line-height: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: start;
+}
+
+.underline-text-button::after{
+  content: "";
+  display: block;
+  width: 50%;
+  text-align: center;
+  height: 2px;
+  background-color: var(--red-primary);
+  transition: 0.4s;
+}
+
+.underline-text-button:hover{
+  color: #610c0c;
+}
+
+.underline-text-button:hover::after{
+  width: 100%;
+  color: #610c0c;
+}
+
+@media only screen and (max-width: 800px){
+  .underline-text-button{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .underline-text-button{
+    font-size: 12px;
+  }
+}

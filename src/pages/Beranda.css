@@ -1,0 +1,11 @@
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+@media only screen and (max-width:1000px){
+  main{
+    gap: 5rem;
+  }
+}

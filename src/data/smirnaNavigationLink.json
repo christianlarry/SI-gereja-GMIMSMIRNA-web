@@ -1,0 +1,95 @@
+[
+  {
+    "page": "Beranda",
+    "url": "/",
+    "dropdowns": null
+  },
+  {
+    "page": "Profil Gereja",
+    "url": "/profil-gereja",
+    "dropdowns": [
+      {
+        "page": "Sejarah Gereja",
+        "url": "/sejarah-gereja"
+      },
+      {
+        "page": "Visi Dan Misi",
+        "url": "/visi-misi"
+      }
+    ]
+  },
+  {
+    "page": "Perangkat Pelayanan",
+    "url": "/perangkat-pelayanan",
+    "dropdowns": [
+      {
+        "page": "Penasihat BPMJ",
+        "url": "/perangkat-pelayanan/penasihat-bpmj"
+      },
+      {
+        "page": "BPMJ",
+        "url": "/perangkat-pelayanan/kolom"
+      },
+      {
+        "page": "Kolom",
+        "url": "/perangkat-pelayanan/kolom"
+      },
+      {
+        "page": "Kompelka",
+        "url": "/perangkat-pelayanan/kompelka"
+      },
+      {
+        "page": "Komisi Kerja",
+        "url": "/perangkat-pelayanan/komisi-kerja"
+      },
+      {
+        "page": "Rayon Pemuda Anak",
+        "url": "/perangkat-pelayanan/rayon-pemuda-anak"
+      }
+    ]
+  },
+  {
+    "page": "Data Jemaat",
+    "url": "/data-jemaat",
+    "dropdowns": null
+  },
+  {
+    "page": "Link",
+    "url": null,
+    "dropdowns": [
+      {
+        "page": "Dashboard",
+        "url": "/dashboard"
+      },
+      {
+        "page": "Sinode GMIM",
+        "url": "https://www.gmim.or.id/"
+      },
+      {
+        "page": "Dodoku GMIM",
+        "url": "https://www.dodokugmim.com/"
+      },
+      {
+        "page": "PKB Sinode GMIM",
+        "url": "https://pkb.gmim.or.id/"
+      },
+      {
+        "page": "WKI Sinode GMIM",
+        "url": "https://www.gmim.or.id/wki/"
+      },
+      {
+        "page": "Pemuda Sinode GMIM",
+        "url": "https://pemuda.gmim.or.id/"
+      },
+      {
+        "page": "Remaja Sinode GMIM",
+        "url": "https://remaja.gmim.or.id/"
+      },
+      {
+        "page": "KPA Sinode GMIM",
+        "url": "http://kpas.gmim.or.id/in/"
+      }
+    ],
+    "dropdownRight": true
+  }
+]

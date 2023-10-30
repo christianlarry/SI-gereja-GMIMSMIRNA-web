@@ -1,0 +1,17 @@
+.modal-header-subtitle{
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--red-primary);
+}
+
+@media only screen and (max-width: 800px){
+  .modal-header-subtitle{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .modal-header-subtitle{
+    font-size: 12px;
+  }
+}

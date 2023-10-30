@@ -1,0 +1,31 @@
+.pengumuman-outer{
+  padding: 0 10px;
+  background-color: var(--white-secondary);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+}
+
+.pengumuman-wrapper{
+  position: relative;
+  border-radius: 10px;
+  top: -50px;
+  z-index: 1;
+}
+
+.pengumuman-swiper-pagination{
+  display: flex;
+  gap: var(--pagination-gap);
+  position: absolute; /* Event Bullet Absolute Ke Class/elemen event-outer diatas */
+  z-index: 1;
+  bottom: 15px !important;
+  justify-content: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1050px){
+  .pengumuman-wrapper{
+      width: 80%;
+      margin: 0 auto;
+  }
+}

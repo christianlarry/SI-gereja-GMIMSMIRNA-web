@@ -1,0 +1,22 @@
+[
+  {
+    "nama": "Pdt. Gammy R.B. Porong,S.Th.",
+    "jabatan": "Ketua",
+    "imageUrl": "images/bpmj/ketua.png"
+  },
+  {
+    "nama": "Pnt. Prof. Ferdinand Kerebungu, M.Si.",
+    "jabatan": "Wakil Ketua",
+    "imageUrl": "images/bpmj/wakil_ketua.jpg"
+  },
+  {
+    "nama": "Pnt. Dr.Ir. Ari B. Rondonuwu,M.Sc.M.Si.",
+    "jabatan": "Sekretaris",
+    "imageUrl": "images/bpmj/sekretaris.jpg"
+  },
+  {
+    "nama": "Dkn. Innov Th. Walelang, S.Sos,M.Si",
+    "jabatan": "Bendahara",
+    "imageUrl": "images/bpmj/bendahara.png"
+  }
+]
