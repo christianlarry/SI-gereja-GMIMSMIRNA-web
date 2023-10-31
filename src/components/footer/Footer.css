@@ -1,0 +1,157 @@
+footer{
+  width: 100%;
+  margin-top: 8rem;
+  color: white;
+}
+
+.footer-top{
+  background-image: linear-gradient(rgba(0, 19, 54, 0.75), rgba(0, 19, 54, 0.75), rgba(0, 19, 54, 0.8)),url('/images/jemaat.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 0;
+}
+
+.footer-top-wrapper{
+  display: flex;
+  gap: 5rem;
+}
+
+.footer-section-title{
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.footer-section-title::before{
+  content: "†";
+  color: var(--red-primary);
+  font-weight: lighter;
+  padding-right: 8px;
+  font-size: 1.8rem;
+}
+
+.footer-section-content p{
+  font-family: var(--font-family-secondary);
+  text-align: justify;
+}
+
+.footer-section-content p,
+.footer-section-content span,
+.footer-section-content a{
+  font-size: 15px;
+  color: #e2e2e2;
+}
+
+.footer-about-social-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-about-social-list a{
+  color: var(--white);
+  display: inline-block;
+  font-size: 1.2rem;
+  background-color: #868686;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.footer-about-social-list a:hover{
+  opacity: 0.8;
+}
+
+.footer-about-social-item:nth-child(1) a{
+  background-color: var(--facebook);
+}
+
+.footer-about-social-item:nth-child(2) a{
+  background-color: var(--instagram);
+}
+
+.footer-about-social-item:nth-child(3) a{
+  background-color: var(--youtube);
+}
+
+.footer-about-social-item:nth-child(4) a{
+  background-color: var(--mail);
+}
+
+.footer-alamat-lists{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-alamat-lists li{
+  display: flex;
+  align-items: center;
+}
+
+.footer-alamat-lists li::before{
+  content: "•";
+  color: var(--red-primary);
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.footer-alamat-lists li span{
+  overflow-x: hidden;
+}
+
+/* Footer Bottom */
+
+.footer-bottom{
+  background-color: var(--bg-secondary-dark);
+  padding: 8px 0;
+}
+
+.footer-bottom-copyright{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-bottom-copyright span{
+  font-size: 14px;
+  color: #696969;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1050px){
+  .footer-top-wrapper{
+      flex-direction: column;
+      gap: 2.5rem;
+  }
+
+  .footer-top-wrapper section{
+      width: 100%;
+      padding: 0 1rem;
+  }
+
+  .footer-top-wrapper .about-social{
+      position: static;
+      margin-top: 2rem;
+      justify-content: start;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .footer-section-content p,
+  .footer-section-content span,
+  .footer-section-content a,
+  .footer-bottom-copyright span{
+    font-size: 12px;
+  }
+
+  .footer-section-title{
+    font-size: 1.2rem;
+  }
+}

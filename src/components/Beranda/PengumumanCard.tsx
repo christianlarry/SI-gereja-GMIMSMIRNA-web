@@ -42,7 +42,9 @@ const PengumumanCard = ({data}:PengumumanCardProps) => {
         </div>
         <div className="pengumuman-title">
           <h1 title={data.judul}>{data.judul}</h1>
-          <UnderlineTextButton text='Detail Pengumuman' onClick={handlePengumumanModal}/>
+          <UnderlineTextButton onClick={handlePengumumanModal}>
+            <span>Detail Pengumuman</span>
+          </UnderlineTextButton>
         </div>
       </div>
 

@@ -2,11 +2,11 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  align-items: center;
 }
 
 .berita-main-container{
-  padding: 0 1rem;
-  padding-top: 2.5rem;
+  width: 100%;
 }
 
 .berita-swiper-pagination{
@@ -16,7 +16,7 @@
   gap: var(--pagination-gap);
 }
 
-@media only screen and (max-width: 1299px){
+@media only screen and (max-width: 1349px){
   .berita-main-container{
       max-width: 840px;
   }

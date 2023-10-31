@@ -42,3 +42,15 @@
   padding: 1rem;
   color: var(--white);
 }
+
+@media only screen and (max-width:800px){
+  .struktur-bpmj-lists img{
+    width: 200px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width:500px){
+  .struktur-bpmj-lists img{
+    width: 150px;
+    height: 150px;
+  }}

@@ -1,0 +1,69 @@
+.data-not-found-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.data-not-found-title{
+  display: flex;
+  align-items: end;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.data-not-found-title > h2{
+  font-weight: 700;
+  font-size: 5em;
+  font-family: var(--font-family-primary),sans-serif;
+}
+
+.data-not-found-title > h2 > span{
+  color: var(--red-primary);
+}
+
+.data-not-found-title > span{
+  font-weight: 500;
+  font-size: 3em;
+  position: relative;
+  bottom: 16px;
+  margin-left: 1rem;
+}
+
+.data-not-found-status{
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+.data-not-found-message{
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.data-not-found-refresh{
+  color: var(--red-primary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.data-not-found-refresh:hover{
+  text-decoration: underline;
+}
+
+@media only screen and (max-width:800px){
+  .data-not-found-wrapper{
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width:500px){
+  .data-not-found-wrapper{
+    font-size: 10px;
+  }
+
+  .data-not-found-message{
+    font-size: 12px;
+  }
+}

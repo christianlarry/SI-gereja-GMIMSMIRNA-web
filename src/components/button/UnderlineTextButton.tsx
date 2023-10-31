@@ -1,12 +1,12 @@
 import './UnderlineTextButton.css'
 
 interface UnderlineTextButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
-  text:string
+  children:React.ReactElement
 }
 
-const UnderlineTextButton = ({text,...props}:UnderlineTextButtonProps)=>{
+const UnderlineTextButton = ({children,...props}:UnderlineTextButtonProps)=>{
   return (
-    <button className="underline-text-button" {...props}>{text}
+    <button className="underline-text-button" {...props}>{children}
     </button>
   )
 }

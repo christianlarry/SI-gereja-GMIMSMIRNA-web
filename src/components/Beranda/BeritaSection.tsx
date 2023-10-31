@@ -7,9 +7,38 @@ import Button from '../button/Button'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { SwiperOptions } from 'swiper/types'
 import { Pagination } from 'swiper/modules'
+import NewsCard from '../NewsCard'
+import { useEffect, useState } from 'react'
+import BeritaModel from '../../interfaces/BeritaModel'
+import { getBerita } from '../../services/api'
+import DataNotFound from '../error/DataNotFound'
+import DataLoader from '../loader/DataLoader'
 
 const BeritaSection = () => {
 
+  // STATE
+  const [berita,setBerita] = useState<BeritaModel[]>([])
+  const [isLoading,setIsLoading] = useState<boolean>(false)
+
+  // EFFECT
+  useEffect(()=>{
+
+    getBeritaAndSetState()
+  },[])
+
+  const getBeritaAndSetState = ()=>{
+    setIsLoading(true)
+    getBerita()
+    .then(value=>{
+      setIsLoading(false)
+      setBerita(value.data.data)
+    })
+    .catch(err=>{
+      console.error(err)
+    })
+  }
+
+  // SWIPER PROPS
   const beritaSwiperProps:SwiperOptions = {
     modules: [Pagination],
     spaceBetween: 48,
@@ -23,42 +52,51 @@ const BeritaSection = () => {
         bulletActiveClass: 'swiper-bullet-active',
     },
     breakpoints: {
-        910: {
-            slidesPerView: 2,
-            slidesPerGroup: 2
-        },
-        1300: {
-            slidesPerView: 3,
-            slidesPerGroup: 3
-        }
+      1350:{
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+      910:{
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      }
     }
   }
 
   return (<section>
     <div className="container berita-container">
-      <div className="berita-wrapper">
-        <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
+      <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
 
-          <Link to="/berita">
-            <SectionSubtitle text='Berita Gereja'/>
-          </Link>
-          <SectionTitle text='Berita Terbaru'/>
-          <SectionTitleSep />
+        <Link to="/berita">
+          <SectionSubtitle text='Berita Gereja'/>
+        </Link>
+        <SectionTitle text='Berita Terbaru'/>
+        <SectionTitleSep />
 
-        </div>
-        <div className="berita-main-container">
-          <Swiper {...beritaSwiperProps}>
-            <SwiperSlide>
+      </div>
 
-            </SwiperSlide>
+      <div className="berita-main-container">
+        {berita.length !== 0 && 
+          <Swiper {...beritaSwiperProps} style={{padding: '1rem'}}>
+            {berita.map((value,i)=>(
+              <SwiperSlide key={i} style={{width: 'auto',display:'flex',justifyContent:'center'}}>
+                <NewsCard berita={value}/>
+              </SwiperSlide>
+            ))}
           </Swiper>
+        }
 
-          <div className="berita-swiper-pagination"></div>
-        </div>
+        {(berita.length === 0 && !isLoading) &&
+          <DataNotFound message='Belum ada berita yang diposting.' refreshMessage='Refresh berita' onRefresh={getBeritaAndSetState}/>
+        }
 
-        <div style={{display: 'flex',justifyContent:'center', marginTop: '2rem'}}>
-          <Button><Link to='/berita' className='font-family-primary'>Lihat Berita Lainnya</Link></Button>
-        </div>
+        {isLoading && <DataLoader message='Mendapatkan Berita...'/>}
+
+        <div className="berita-swiper-pagination"></div>
+      </div>
+
+      <div style={{display: 'flex',justifyContent:'center'}}>
+        <Button><Link to='/berita' className='font-family-primary'>Lihat Berita Lainnya</Link></Button>
       </div>
 
     </div>

@@ -4,11 +4,17 @@
   font-family: "Poppins",sans-serif;
   font-weight: 500;
   color: var(--red-primary);
-  transition: 0.4s;
   line-height: 20px;
   cursor: pointer;
   font-size: 1rem;
   text-align: start;
+}
+
+.underline-text-button :first-child{
+  color: var(--red-primary);
+  font-family: var(--font-family-primary);
+  font-weight: 500;
+  transition: 0.4s;
 }
 
 .underline-text-button::after{
@@ -21,7 +27,7 @@
   transition: 0.4s;
 }
 
-.underline-text-button:hover{
+.underline-text-button:hover :first-child{
   color: #610c0c;
 }
 

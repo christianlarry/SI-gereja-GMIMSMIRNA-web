@@ -89,6 +89,7 @@
 
 .hero-content .text h1{
   font-size: 3em;
+  line-height: 40px;
 }
 
 .hero-content .text h3{
@@ -127,7 +128,11 @@
 
 @media only screen and (max-width: 768px){
   .hero-content .text{
-      font-size: 13px;
+      font-size: 10px;
+  }
+
+  .hero-content .text :first-child{
+    margin-bottom: -10px;
   }
 
   .hero-content .category-menu{
