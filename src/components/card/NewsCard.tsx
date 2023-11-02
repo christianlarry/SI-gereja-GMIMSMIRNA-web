@@ -1,11 +1,11 @@
 import './NewsCard.css'
-import BeritaModel from '../interfaces/BeritaModel'
-import UnderlineTextButton from './button/UnderlineTextButton'
+import BeritaModel from '../../interfaces/BeritaModel'
+import UnderlineTextButton from '../button/UnderlineTextButton'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock, faUser } from '@fortawesome/free-regular-svg-icons'
-import Paragraph from './Paragraph'
-import { shortMonth, zeroPad } from '../utils/dateTimeFormat'
+import Paragraph from '../Paragraph'
+import { shortMonth, zeroPad } from '../../utils/dateTimeFormat'
 
 interface NewsCardProps{
   berita:BeritaModel

@@ -5,77 +5,58 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faNewspaper,faChurch,faTrowel,faImage} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import SlideReveal from '../reveal/SlideReveal'
+import FadeReveal from '../reveal/FadeReveal'
+import ZoomReveal from '../reveal/ZoomReveal'
 
 const BerandaHero = () => {
   return (
     <section id="hero">
       <div className="hero-container swiper">
+        <motion.div
+          initial={{opacity: 0.7,}}
+          animate={{opacity: 0,transitionEnd: {display: "none"}}}
+          transition={{
+            duration: 0.5,
+            ease: 'linear'
+          }}
+          className='hero-animate-box'/>
         <HeroSwiper />
         <div className="hero-content">
-          <motion.div 
-          className="logo"
-          variants={{
-            hidden: {opacity: 0, y:-100},
-            visible: {opacity: 1, y:0}
-          }}
-          initial="hidden"
-          animate="visible"
-          transition={{duration: 2,type:'spring',bounce: 0.3,delay: 0.25}}
-          >
-            <img src="/images/gmim-large.png" alt="logo gmim" width="150px" />
-          </motion.div>
-          <div className="text">
-            <motion.h3
-            variants={{
-              hidden: {opacity: 0},
-              visible: {opacity: 1}
-            }}
-            initial='hidden'
-            animate='visible'
-            transition={{duration: 1.5,delay: 1}}
-            >
-              Website Resmi Jemaat
-            </motion.h3>
-            <motion.h1
-            variants={{
-              hidden: {opacity: 0,scale: 1.4},
-              visible: {opacity: 1,scale: 1}
-            }}
-            initial='hidden'
-            animate='visible'
-            transition={{type:'spring',duration: 2,delay: 0.8}}
-            >GMIM Smirna Malalayang</motion.h1>
-          </div>
-          <motion.div 
-          className="category"
-          variants={{
-            hidden: {opacity: 0, y:50},
-            visible: {opacity: 1, y:0}
-          }}
-          initial="hidden"
-          animate="visible"
-          transition={{duration: 1.4,type:'spring',bounce: 0.5,delay: 1.5}}
-          >
-            <div className="category-menu">
-              <Button tabIndex={-1}>
-                <Link to="/berita">
-                  <i><FontAwesomeIcon icon={faNewspaper}/></i>Berita
-                </Link>
-              </Button>
-              <Button tabIndex={-1}>
-                <Link to="/ibadahminggu"><i><FontAwesomeIcon icon={faChurch}/></i>Ibadah Minggu</Link>
-              </Button>
-              <Button tabIndex={-1}>
-                <Link to="/pembangunan"><i><FontAwesomeIcon icon={faTrowel}/></i>Pembangunan</Link>
-              </Button>
-              <Button tabIndex={-1}>
-                <Link to="/galeri"><i><FontAwesomeIcon icon={faImage}/></i>Galeri</Link>
-              </Button>
+          <FadeReveal duration={1.2} delay={1.2}>
+            <div className="logo">
+              <img src="/images/gmim-large.png" alt="logo gmim" width="150px" />
             </div>
-          </motion.div>
+          </FadeReveal>
+          <div className="text">
+            <SlideReveal direction='y' translateFrom={-50} delay={0.7}>
+              <h3>Website Resmi Jemaat</h3>
+            </SlideReveal>
+            <ZoomReveal scaleFrom={1.4} duration={1}>
+              <h1>GMIM Smirna Malalayang</h1>
+            </ZoomReveal>
+          </div>
+          <SlideReveal direction='y' translateFrom={50} delay={1.4} duration={1}>
+            <div className="category">
+              <div className="category-menu">
+                <Button tabIndex={-1}>
+                  <Link to="/berita">
+                    <i><FontAwesomeIcon icon={faNewspaper}/></i>Berita
+                  </Link>
+                </Button>
+                <Button tabIndex={-1}>
+                  <Link to="/ibadahminggu"><i><FontAwesomeIcon icon={faChurch}/></i>Ibadah Minggu</Link>
+                </Button>
+                <Button tabIndex={-1}>
+                  <Link to="/pembangunan"><i><FontAwesomeIcon icon={faTrowel}/></i>Pembangunan</Link>
+                </Button>
+                <Button tabIndex={-1}>
+                  <Link to="/galeri"><i><FontAwesomeIcon icon={faImage}/></i>Galeri</Link>
+                </Button>
+              </div>
+            </div>
+          </SlideReveal>
         </div>
-        {/* <button className="hero-btn hero-swiper-next"><i className="fa-solid fa-caret-right"></i></button>
-        <button className="hero-btn hero-swiper-prev"><i className="fa-solid fa-caret-left"></i></button> */}
       </div>
     </section>
   )

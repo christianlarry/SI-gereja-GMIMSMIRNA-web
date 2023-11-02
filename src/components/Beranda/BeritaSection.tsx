@@ -7,12 +7,14 @@ import Button from '../button/Button'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { SwiperOptions } from 'swiper/types'
 import { Pagination } from 'swiper/modules'
-import NewsCard from '../NewsCard'
+import NewsCard from '../card/NewsCard'
 import { useEffect, useState } from 'react'
 import BeritaModel from '../../interfaces/BeritaModel'
 import { getBerita } from '../../services/api'
 import DataNotFound from '../error/DataNotFound'
 import DataLoader from '../loader/DataLoader'
+import SlideReveal from '../reveal/SlideReveal'
+import FadeReveal from '../reveal/FadeReveal'
 
 const BeritaSection = () => {
 
@@ -65,39 +67,44 @@ const BeritaSection = () => {
 
   return (<section>
     <div className="container berita-container">
-      <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
+      <SlideReveal direction='y' translateFrom={50}>
+        <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
 
-        <Link to="/berita">
-          <SectionSubtitle text='Berita Gereja'/>
-        </Link>
-        <SectionTitle text='Berita Terbaru'/>
-        <SectionTitleSep />
+          <Link to="/berita">
+            <SectionSubtitle text='Berita Gereja'/>
+          </Link>
+          <SectionTitle text='Berita Terbaru'/>
+          <SectionTitleSep />
 
-      </div>
+        </div>
+      </SlideReveal>
 
-      <div className="berita-main-container">
-        {berita.length !== 0 && 
-          <Swiper {...beritaSwiperProps} style={{padding: '1rem'}}>
-            {berita.map((value,i)=>(
-              <SwiperSlide key={i} style={{width: 'auto',display:'flex',justifyContent:'center'}}>
-                <NewsCard berita={value}/>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        }
+      <SlideReveal direction='y' translateFrom={50}>
+        <div className="berita-main-container">
+          {berita.length !== 0 && 
+            <Swiper {...beritaSwiperProps} style={{padding: '1rem'}}>
+              {berita.map((value,i)=>(
+                <SwiperSlide key={i} style={{width: 'auto',display:'flex',justifyContent:'center'}}>
+                  <NewsCard berita={value}/>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          }
 
-        {(berita.length === 0 && !isLoading) &&
-          <DataNotFound message='Belum ada berita yang diposting.' refreshMessage='Refresh berita' onRefresh={getBeritaAndSetState}/>
-        }
+          {(berita.length === 0 && !isLoading) &&
+            <DataNotFound message='Belum ada berita yang diposting.' refreshMessage='Refresh berita' onRefresh={getBeritaAndSetState}/>
+          }
 
-        {isLoading && <DataLoader message='Mendapatkan Berita...'/>}
+          {isLoading && <DataLoader message='Mendapatkan Berita...'/>}
 
-        <div className="berita-swiper-pagination"></div>
-      </div>
-
-      <div style={{display: 'flex',justifyContent:'center'}}>
-        <Button><Link to='/berita' className='font-family-primary'>Lihat Berita Lainnya</Link></Button>
-      </div>
+          <div className="berita-swiper-pagination"></div>
+        </div>
+      </SlideReveal>
+      <FadeReveal duration={1}>
+        <div style={{display: 'flex',justifyContent:'center'}}>
+          <Button><Link to='/berita' className='font-family-primary'>Lihat Berita Lainnya</Link></Button>
+        </div>
+      </FadeReveal>
 
     </div>
   </section>)
