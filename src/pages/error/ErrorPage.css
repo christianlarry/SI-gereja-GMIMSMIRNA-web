@@ -1,0 +1,39 @@
+.error-page-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-color);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.error-page-logo span{
+  color: var(--black) !important;
+}
+
+.error-page-logo{
+  pointer-events: none;
+  font-size: 10rem;
+  color: var(--red-primary);
+}
+
+.error-page-title{
+  font-family: var(--font-family-primary),sans-serif;
+  font-weight: 500;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.error-page-desc{
+  color: var(--red-primary);
+  margin-bottom: 6rem;
+}
+
+@media only screen and (max-width:800px){
+  .error-page-logo{font-size: 7rem;}
+  .error-page-title{font-size: 1.5rem;}
+  .error-page-desc{font-size: 14px;}
+}

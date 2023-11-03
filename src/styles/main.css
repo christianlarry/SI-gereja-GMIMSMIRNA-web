@@ -19,6 +19,9 @@ ul,li,a{text-decoration: none;list-style: none;color: var(--black);}
 h1,h2,h3,h4,h5,h6{font-family: var(--font-family-primary);}
 a,p{font-family: var(--font-family-secondary);}
 
+main{display: flex;flex-direction: column;gap: 8rem;}
+@media only screen and (max-width:1000px){main{gap: 5rem;}}
+
 .container{max-width: 1300px;margin: 0 auto;padding: 0 1rem;}
 .h-full{height: 100%;}
 .transition-fast{transition: 0.2s;}

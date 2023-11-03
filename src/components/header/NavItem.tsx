@@ -1,5 +1,6 @@
 import { MouseEvent, useState } from 'react'
 import './NavItem.css'
+import { Link } from 'react-router-dom'
 
 interface NavItemProps{
   data: {
@@ -26,11 +27,22 @@ const NavItem = ({data}:NavItemProps) => {
 
   return (
     <li className="nav-list-items" tabIndex={data.dropdowns ? 0 : undefined}>
-      <a href={data.url ? data.url : undefined}>{data.page}{data.dropdowns && <span className={isDropdownToggle ? 'active' : undefined} onClick={handleDropdownMenusToggle}>+</span>}</a>
+      {data.url && 
+        <Link to={data.url}>
+          {data.page}
+          {data.dropdowns && <span className={isDropdownToggle ? 'active' : undefined} onClick={handleDropdownMenusToggle}>+</span>}
+        </Link>
+      }{!data.url &&
+        <a>
+          {data.page}
+          {data.dropdowns && <span className={isDropdownToggle ? 'active' : undefined} onClick={handleDropdownMenusToggle}>+</span>}
+        </a>
+      }
+
       {data.dropdowns && 
       <ul className={`nav-dropdown-menus${data.dropdownRight ? ' dropdown-to-right' : ''}${isDropdownToggle ? ' active':''}`}>
         {data.dropdowns.map((value,i)=>(
-          <li className="nav-dropdown-items" key={i}><a href={value.url}>{value.page}</a></li>
+          <li className="nav-dropdown-items" key={i}><Link to={value.url}>{value.page}</Link></li>
         ))}
       </ul>
       }
