@@ -7,9 +7,11 @@ interface SlideRevealProps{
   duration?:number
   delay?:number
   notOnce?:boolean
+  style?:React.CSSProperties
+  className?:string
 }
 
-const SlideReveal = ({children,direction,translateFrom,duration,delay,notOnce}:SlideRevealProps)=>{
+const SlideReveal = ({children,direction,translateFrom,duration,delay,notOnce,...props}:SlideRevealProps)=>{
 
   let variant:{hidden:Variant,visible:Variant} = {
     hidden: {opacity: 0},
@@ -48,6 +50,7 @@ const SlideReveal = ({children,direction,translateFrom,duration,delay,notOnce}:S
         duration: duration || 0.6,
         delay: delay
       }}
+      {...props}
     >
       {children}
     </motion.div>

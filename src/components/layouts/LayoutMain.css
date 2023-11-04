@@ -1,6 +1,19 @@
 .layout-main-wrapper{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-height: 100vh;
+}
+
+.layout-main-top{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-main-suspense-fallback{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
 }

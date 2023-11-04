@@ -1,4 +1,4 @@
-.hero-img-wrapper{
+.beranda-hero-img-wrapper{
   background-color: #333333;
   height: 800px;
   color: #fff;
@@ -7,7 +7,7 @@
   transition: 0.2s;
 }
 
-.hero-img{
+.beranda-hero-img{
   width: 100%;
   height: 100%;
   display: block;
@@ -16,7 +16,7 @@
   user-select: none;
 }
 
-.hero-img-filter{
+.beranda-hero-img-filter{
   display: block;
   position: absolute;
   left: 0;

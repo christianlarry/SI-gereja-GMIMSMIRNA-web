@@ -1,4 +1,4 @@
-.data-not-found-wrapper{
+.fetch-error-wrapper{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,7 +6,7 @@
   font-size: 1rem;
 }
 
-.data-not-found-title{
+.fetch-error-title{
   display: flex;
   align-items: end;
   text-align: center;
@@ -14,17 +14,17 @@
   justify-content: center;
 }
 
-.data-not-found-title > h2{
+.fetch-error-title > h2{
   font-weight: 700;
   font-size: 5em;
   font-family: var(--font-family-primary),sans-serif;
 }
 
-.data-not-found-title > h2 > span{
+.fetch-error-title > h2 > span{
   color: var(--red-primary);
 }
 
-.data-not-found-title > span{
+.fetch-error-title > span{
   font-weight: 500;
   font-size: 3em;
   position: relative;
@@ -32,38 +32,42 @@
   margin-left: 1rem;
 }
 
-.data-not-found-status{
+.fetch-error-status{
   font-size: 1.5em;
   text-decoration: underline;
 }
 
-.data-not-found-message{
+.fetch-error-message{
   margin-top: 10px;
   font-size: 15px;
 }
 
-.data-not-found-refresh{
+.fetch-error-refresh{
   color: var(--red-primary);
   cursor: pointer;
   user-select: none;
 }
 
-.data-not-found-refresh:hover{
+.fetch-error-refresh:hover{
   text-decoration: underline;
 }
 
 @media only screen and (max-width:800px){
-  .data-not-found-wrapper{
+  .fetch-error-wrapper{
     font-size: 12px;
   }
 }
 
 @media only screen and (max-width:500px){
-  .data-not-found-wrapper{
-    font-size: 10px;
+  .fetch-error-wrapper{
+    font-size: 8px;
   }
 
-  .data-not-found-message{
+  .fetch-error-message{
     font-size: 12px;
+  }
+
+  .fetch-error-title span{
+    bottom: 10px;
   }
 }

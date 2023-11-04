@@ -1,4 +1,4 @@
-import './DataNotFound.css'
+import './FetchError.css'
 
 interface DataNotFoundProps extends React.HTMLAttributes<HTMLDivElement>{
   message:string
@@ -13,18 +13,18 @@ const DataNotFound = ({message,className,refreshMessage,onRefresh,...props}:Data
   }
 
   return (
-    <div className={`data-not-found-wrapper${className ? ' '+className : ''}`} {...props}>
-      <div className='data-not-found-title'>
+    <div className={`fetch-error-wrapper${className ? ' '+className : ''}`} {...props}>
+      <div className='fetch-error-title'>
         <h2>4<span>0</span>4</h2>
         <span>Not Found</span>
       </div>
-      <span className='data-not-found-status'>Data Tidak Ditemukan</span>
-      <span className='data-not-found-message'>
+      <span className='fetch-error-status'>Data Tidak Ditemukan</span>
+      <span className='fetch-error-message'>
         {message}
         {refreshMessage && (
           <>
             <span> </span>
-            <span className='data-not-found-refresh' onClick={onRefresh && handleRefreshClick}>{refreshMessage}</span>
+            <span className='fetch-error-refresh' onClick={onRefresh && handleRefreshClick}>{refreshMessage}</span>
           </>
         )}
       </span>

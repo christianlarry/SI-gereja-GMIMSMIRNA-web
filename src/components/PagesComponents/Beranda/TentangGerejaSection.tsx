@@ -1,18 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPerson, faPeopleRoof, faTableCells } from '@fortawesome/free-solid-svg-icons'
-import Paragraph from "../../components/Paragraph"
-import SectionSubtitle from "../../components/SectionSubtitle"
-import SectionTitle from "../../components/SectionTitle"
-import SectionTitleSep from "../../components/SectionTitleSep"
-import Button from "../../components/button/Button"
+import Paragraph from "../../Paragraph"
+import SectionSubtitle from "../../section/SectionSubtitle"
+import SectionTitle from "../../section/SectionTitle"
+import SectionTitleSep from "../../section/SectionTitleSep"
+import Button from "../../button/Button"
 import { Link } from "react-router-dom"
 
 import './TentangGerejaSection.css'
-import SlideReveal from '../reveal/SlideReveal'
+import SlideReveal from '../../reveal/SlideReveal'
 import { useEffect,useState } from 'react'
-import { getTotalAnggotaJemaat, getTotalKeluarga, getTotalKolom } from '../../services/api'
+import { getTotalAnggotaJemaat, getTotalKeluarga, getTotalKolom } from '../../../services/api'
 import { isAxiosError } from 'axios'
-import FadeReveal from '../reveal/FadeReveal'
+import FadeReveal from '../../reveal/FadeReveal'
 
 const TentangGerejaSection = ()=>{
 
@@ -34,6 +34,7 @@ const TentangGerejaSection = ()=>{
 
       } catch (err) {
         console.error(err)
+        if(err instanceof Error) console.error(err.stack)
         if(isAxiosError(err)) console.error('Request error: '+err.response?.status)
       }
     }

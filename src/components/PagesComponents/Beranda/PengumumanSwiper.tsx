@@ -2,15 +2,12 @@ import PengumumanCard from './PengumumanCard'
 import {Swiper,SwiperSlide} from "swiper/react"
 import {Pagination} from 'swiper/modules'
 import { SwiperOptions } from 'swiper/types'
-import {getPengumuman} from '../../services/api'
-
-import {isAxiosError} from 'axios'
-import {useState, useEffect} from 'react'
-import PengumumanModel from '../../interfaces/PengumumanModel'
+import useSWR from 'swr'
+import { getPengumuman } from '../../../services/api'
+import PengumumanModel from '../../../interfaces/PengumumanModel'
+import InternalServerError from '../../error/InternalServerError'
 
 const PengumumanSwiper = () => {
-  const [pengumuman,setPengumuman] = useState<PengumumanModel[] | null>(null)
-
   const swiperProps: SwiperOptions = {
     modules: [Pagination],
     slidesPerView: 1,
@@ -29,17 +26,16 @@ const PengumumanSwiper = () => {
     }
   }
 
-  useEffect(()=>{
-    getPengumuman().then(response =>{
-      if(response.status === 200){
-        setPengumuman(response.data.data as PengumumanModel[])
-      }
-    }).catch(err =>{
-      if(isAxiosError(err)){
-        console.error(err.response?.status,err.response?.statusText)
-      }
-    })
-  },[])
+  const {data,error,mutate} = useSWR('/api/pengumuman',getPengumuman,{revalidateOnFocus: true})
+  const pengumuman = data?.data.data as PengumumanModel[]
+
+  if(error) return (
+    <div style={{width:'100%',position:'relative',textAlign:'center',top:50}}>
+      <div>
+        <InternalServerError message='Tidak bisa mendapatkan pengumuman.' refreshMessage='Refresh Pengumuman' onRefresh={mutate}/>
+      </div>
+    </div>
+  )
 
   return (
     <Swiper {...swiperProps}>

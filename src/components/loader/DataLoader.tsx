@@ -1,4 +1,4 @@
-import spinnerGif from '../../assets/images/loader/spinner-2.gif'
+import spinnerGif from '../../assets/images/loader/spinner-2.svg'
 
 import './DataLoader.css'
 

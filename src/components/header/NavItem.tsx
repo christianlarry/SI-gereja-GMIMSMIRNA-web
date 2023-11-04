@@ -33,7 +33,7 @@ const NavItem = ({data}:NavItemProps) => {
           {data.dropdowns && <span className={isDropdownToggle ? 'active' : undefined} onClick={handleDropdownMenusToggle}>+</span>}
         </Link>
       }{!data.url &&
-        <a>
+        <a style={{pointerEvents: 'none'}}>
           {data.page}
           {data.dropdowns && <span className={isDropdownToggle ? 'active' : undefined} onClick={handleDropdownMenusToggle}>+</span>}
         </a>

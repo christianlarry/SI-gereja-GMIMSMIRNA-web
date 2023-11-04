@@ -1,12 +1,12 @@
-import SectionTitle from '../SectionTitle'
+import SectionTitle from '../../section/SectionTitle'
 import './StrukturBpmjSection.css'
-import strukturBpmj from '../../data/strukturBpmj.json'
-import ProfileCardRounded from '../card/ProfileCardRounded'
-import SectionSubtitle from '../SectionSubtitle'
-import Button from '../button/Button'
+import strukturBpmj from '../../../data/strukturBpmj.json'
+import ProfileCardRounded from '../../card/ProfileCardRounded'
+import SectionSubtitle from '../../section/SectionSubtitle'
+import Button from '../../button/Button'
 import { Link } from 'react-router-dom'
-import SlideReveal from '../reveal/SlideReveal'
-import FadeReveal from '../reveal/FadeReveal'
+import SlideReveal from '../../reveal/SlideReveal'
+import FadeReveal from '../../reveal/FadeReveal'
 
 const StrukturBpmjSection = ()=>(
   <section className='struktur-bpmj'>

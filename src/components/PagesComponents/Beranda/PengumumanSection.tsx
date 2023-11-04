@@ -1,5 +1,5 @@
-import FadeReveal from '../reveal/FadeReveal'
-import SlideReveal from '../reveal/SlideReveal'
+import FadeReveal from '../../reveal/FadeReveal'
+import SlideReveal from '../../reveal/SlideReveal'
 import './PengumumanSection.css'
 import PengumumanSwiper from './PengumumanSwiper'
 

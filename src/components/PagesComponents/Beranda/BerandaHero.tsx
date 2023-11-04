@@ -1,18 +1,18 @@
-import Button from '../button/Button'
+import Button from '../../button/Button'
 import './BerandaHero.css'
 import HeroSwiper from './HeroSwiper'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faNewspaper,faChurch,faTrowel,faImage} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import SlideReveal from '../reveal/SlideReveal'
-import FadeReveal from '../reveal/FadeReveal'
-import ZoomReveal from '../reveal/ZoomReveal'
+import SlideReveal from '../../reveal/SlideReveal'
+import FadeReveal from '../../reveal/FadeReveal'
+import ZoomReveal from '../../reveal/ZoomReveal'
 
 const BerandaHero = () => {
   return (
-    <section id="hero">
-      <div className="hero-container swiper">
+    <section id="beranda-hero">
+      <div className="beranda-hero-container swiper">
         <motion.div
           initial={{opacity: 0.7,}}
           animate={{opacity: 0,transitionEnd: {display: "none"}}}
@@ -20,9 +20,9 @@ const BerandaHero = () => {
             duration: 0.5,
             ease: 'linear'
           }}
-          className='hero-animate-box'/>
+          className='beranda-hero-animate-box'/>
         <HeroSwiper />
-        <div className="hero-content">
+        <div className="beranda-hero-content">
           <FadeReveal duration={1.2} delay={1.2}>
             <div className="logo">
               <img src="/images/gmim-large.png" alt="logo gmim" width="150px" />

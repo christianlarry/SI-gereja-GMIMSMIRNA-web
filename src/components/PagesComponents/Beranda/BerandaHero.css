@@ -4,7 +4,7 @@
 
 /* Swiper Button */
 
-/* .hero-btn{
+/* .beranda-hero-btn{
   background: none;
   border: none;
   cursor: pointer;
@@ -20,46 +20,46 @@
   opacity: 0;
 }
 
-.hero-btn:hover{
+.beranda-hero-btn:hover{
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.hero-container:hover .hero-swiper-next{
+.beranda-hero-container:hover .beranda-hero-swiper-next{
   right: 17%;
   visibility: visible;
   opacity: 1;
 }
 
-.hero-container:hover .hero-swiper-prev{
+.beranda-hero-container:hover .beranda-hero-swiper-prev{
   left: 17%;
   visibility: visible;
   opacity: 1;
 }
 
-.hero-btn i{
+.beranda-hero-btn i{
   color: #e0e0e0;
   font-size: 1.3rem;
 }
 
-.hero-swiper-next{
+.beranda-hero-swiper-next{
   right: 14%;
   z-index: 900;
 }
 
-.hero-swiper-prev{  
+.beranda-hero-swiper-prev{  
   left: 14%;
   z-index: 900;
 }
 
 @media only screen and (max-width: 1025px){
-  .hero-btn{
+  .beranda-hero-btn{
       display: none;
   }
 } */
 
 /* Hero Content */
 
-.hero-content{
+.beranda-hero-content{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,12 +71,12 @@
   right: 0;
 }
 
-.hero-content .logo img{
+.beranda-hero-content .logo img{
   display: block;
   margin-bottom: 10px;
 }
 
-.hero-content .text{
+.beranda-hero-content .text{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,32 +88,32 @@
   margin-top: 10px;
 }
 
-.hero-content .text h1{
+.beranda-hero-content .text h1{
   font-size: 3em;
   line-height: 40px;
 }
 
-.hero-content .text h3{
+.beranda-hero-content .text h3{
   font-size: 2em;
   font-weight: 400;
   line-height: 30px;
 }
 
-.hero-content .category{
+.beranda-hero-content .category{
   margin-top: 100px;
 }
 
-.hero-content .category-menu{
+.beranda-hero-content .category-menu{
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.hero-content .category-menu > Button{
+.beranda-hero-content .category-menu > Button{
   width: 150px;
 }
 
-.hero-content .category-menu a{
+.beranda-hero-content .category-menu a{
   color: #fff;
   display: block;
   font-size: 14px;
@@ -124,11 +124,11 @@
   padding: 12px 0;
 }
 
-.hero-content .category-menu a i{
+.beranda-hero-content .category-menu a i{
   padding-right: 6px;
 }
 
-.hero-animate-box{
+.beranda-hero-animate-box{
   display: block;
   height: 100%;
   width: 100%;
@@ -141,25 +141,25 @@
 }
 
 @media only screen and (max-width: 768px){
-  .hero-content .text{
+  .beranda-hero-content .text{
       font-size: 10px;
       gap: 25px;
   }
 
-  .hero-content .text :first-child{
+  .beranda-hero-content .text :first-child{
     margin-bottom: -10px;
   }
 
-  .hero-content .category-menu{
+  .beranda-hero-content .category-menu{
       flex-wrap: wrap;
       justify-content: center;
   }
 
-  .hero-content .category-menu Button{
+  .beranda-hero-content .category-menu Button{
       width: 130px;
   }
 
-  .hero-content .category-menu a{
+  .beranda-hero-content .category-menu a{
       font-size: 12px;
   }
 }
