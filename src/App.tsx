@@ -3,7 +3,8 @@ import {lazy} from 'react'
 
 // PAGES/COMPONENTS/LAYOUT
 const Beranda = lazy(()=>import('./pages/Beranda'))
-const ProfilGereja = lazy(()=>import('./pages/ProfilGereja'))
+const TentangGereja = lazy(()=>import('./pages/TentangGereja'))
+const SejarahGereja = lazy(()=>import('./pages/SejarahGereja'))
 const PerangkatPelayanan = lazy(()=>import('./pages/PerangkatPelayanan'))
 const DataJemaat = lazy(()=>import('./pages/DataJemaat'))
 
@@ -30,7 +31,8 @@ function App() {
 						<Route index element={<Beranda/>}/>
 					</Route>
 					<Route element={<LayoutMain/>}>
-						<Route path='profil-gereja' element={<ProfilGereja text='Profil Gereja'/>}/>
+						<Route path='tentang-gereja' element={<TentangGereja/>}></Route>
+						<Route path='sejarah-gereja' element={<SejarahGereja/>}></Route>
 						<Route path='perangkat-pelayanan' element={<PerangkatPelayanan text='Perangkat Pelayanan'/>}/>
 						<Route path='data-jemaat' element={<DataJemaat text='Data Jemaat'/>}/>
 					</Route>

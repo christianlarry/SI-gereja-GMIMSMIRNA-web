@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPerson, faPeopleRoof, faTableCells } from '@fortawesome/free-solid-svg-icons'
 import Paragraph from "../../Paragraph"
 import SectionSubtitle from "../../section/SectionSubtitle"
 import SectionTitle from "../../section/SectionTitle"
@@ -9,39 +7,10 @@ import { Link } from "react-router-dom"
 
 import './TentangGerejaSection.css'
 import SlideReveal from '../../reveal/SlideReveal'
-import { useEffect,useState } from 'react'
-import { getTotalAnggotaJemaat, getTotalKeluarga, getTotalKolom } from '../../../services/api'
-import { isAxiosError } from 'axios'
 import FadeReveal from '../../reveal/FadeReveal'
+import StatistikCardLists from '../../StatistikCardLists'
 
 const TentangGerejaSection = ()=>{
-
-  const [totalAnggotaJemaat,setTotalAnggotaJemaat] = useState<number>(0)
-  const [totalKeluarga,setTotalKeluarga] = useState<number>(0)
-  const [totalKolom,setTotalKolom] = useState<number>(0)
-
-  // EFFECT
-  useEffect(()=>{
-    const getStatistik = async ()=>{
-      try {
-        const totalAnggotaJemaat = await getTotalAnggotaJemaat()
-        const totalKeluarga = await getTotalKeluarga()
-        const totalKolom = await getTotalKolom()
-        
-        setTotalAnggotaJemaat(totalAnggotaJemaat.data.data.total)
-        setTotalKeluarga(totalKeluarga.data.data.total)
-        setTotalKolom(totalKolom.data.data.total)
-
-      } catch (err) {
-        console.error(err)
-        if(err instanceof Error) console.error(err.stack)
-        if(isAxiosError(err)) console.error('Request error: '+err.response?.status)
-      }
-    }
-
-    getStatistik()
-  }, [])
-
   return (
     <section>
       <div className="container">
@@ -61,8 +30,8 @@ const TentangGerejaSection = ()=>{
               <div className="tentang-gereja-content-description">
                 <Paragraph text="Jemaat Smirna merupakan bagian dari Gereja Masehi Injili di Minahasa (GMIM) yang berkedudukan di Kelurahan Malalayang Dua Kota Manado. Jemaat Smirna masuk dalam Wilayah Manado Malalayang Barat." style={{ textAlign: 'justify' }} />
                 <Button style={{ marginTop: '1rem' }}>
-                  <Link to='/profil' className="font-family-primary">
-                    Lihat Profil Gereja
+                  <Link to='/profil-gereja' className="font-family-primary">
+                    Lihat Selengkapnya
                   </Link>
                 </Button>
               </div>
@@ -78,29 +47,7 @@ const TentangGerejaSection = ()=>{
               </div>
             </SlideReveal>
             <SlideReveal direction='y' translateFrom={100} duration={0.8}>
-              <ul className="tentang-gereja-statistik-boxs">
-                <li>
-                  <span className="icon">
-                    <FontAwesomeIcon icon={faPerson} />
-                  </span>
-                  <SectionTitle text={totalAnggotaJemaat.toString()} style={{ fontWeight: 600 }} />
-                  <span className="tg-statistik-desc">Anggota Jemaat</span>
-                </li>
-                <li>
-                  <span className="icon">
-                    <FontAwesomeIcon icon={faPeopleRoof} />
-                  </span>
-                  <SectionTitle text={totalKeluarga.toString()} style={{ fontWeight: 600 }} />
-                  <span className="tg-statistik-desc">Jumlah Keluarga</span>
-                </li>
-                <li>
-                  <span className="icon">
-                    <FontAwesomeIcon icon={faTableCells} />
-                  </span>
-                  <SectionTitle text={totalKolom.toString()} style={{ fontWeight: 600 }} />
-                  <span className="tg-statistik-desc">Jumlah Kolom</span>
-                </li>
-              </ul>
+              <StatistikCardLists/>
             </SlideReveal>
           </div>
         </FadeReveal>

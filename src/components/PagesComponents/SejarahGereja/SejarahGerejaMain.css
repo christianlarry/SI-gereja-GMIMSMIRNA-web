@@ -1,0 +1,26 @@
+.article li{
+  display: list-item;
+  list-style: initial;
+  list-style-position: inside;
+}
+
+.article .ordered-lists-type li{
+  list-style: decimal;
+  list-style-position: inside;
+}
+
+.sejarah-gereja .article h2{
+  text-align: center;
+}
+
+.sejarah-gereja .article p{
+  text-align: justify;
+}
+
+@media only screen and (max-width: 1000px){
+  .article{font-size: 14px;}
+}
+
+@media only screen and (max-width: 500px){
+  .article{font-size: 12px;}
+}

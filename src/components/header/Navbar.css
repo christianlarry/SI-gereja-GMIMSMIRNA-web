@@ -129,6 +129,12 @@
     color: var(--red-primary) !important;
 }
 
+@media only screen and (max-width: 1060px){
+    .navbar.sticky .nav-list-items > a{
+        font-size: 15px;
+    }
+}
+
 @media only screen and (max-width: 1025px) {
     .burger-btn{
         display: flex;

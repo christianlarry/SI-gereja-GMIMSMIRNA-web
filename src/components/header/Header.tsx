@@ -30,7 +30,7 @@ const Header = ({beranda}:{beranda?:boolean}) => {
 
 	return (
 		<div className='header-wrapper'>
-			<header>
+			<header className='main-header'>
 				{beranda && <Topbar ref={topbarRef}/>}
 				<Navbar beranda={beranda} ref={navbarRef} isSticky={isSticky}/>
 			</header>

@@ -5,16 +5,16 @@
     "dropdowns": null
   },
   {
-    "page": "Profil Gereja",
-    "url": "/profil-gereja",
+    "page": "Tentang Gereja",
+    "url": "/tentang-gereja",
     "dropdowns": [
+      {
+        "page": "Visi Dan Misi",
+        "url": "/tentang-gereja#visi-misi"
+      },
       {
         "page": "Sejarah Gereja",
         "url": "/sejarah-gereja"
-      },
-      {
-        "page": "Visi Dan Misi",
-        "url": "/visi-misi"
       }
     ]
   },

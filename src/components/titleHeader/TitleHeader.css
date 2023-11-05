@@ -1,0 +1,60 @@
+.title-header{
+  background-image: linear-gradient(rgba(0, 19, 54, 0.8), rgba(0, 19, 54, 0.8), rgba(0, 19, 54, 0.8)),url('/images/background/smirna-gedung-landscape-blur.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 4rem;
+}
+
+.title-header, .title-header span{
+  color: var(--white);
+  text-align: center;
+}
+
+.title-header-container{
+  padding: 5rem 0 !important;
+  padding-bottom: 6rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title-header-title{
+  font-size: 2.2rem;
+  line-height: 30px;
+}
+
+.title-header-nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.title-header-nav-link{
+  color: var(--red-primary);
+  transition: color 0.4s;
+}
+
+.title-header-nav-link::after{
+  content: '-';
+  padding: 0 5px;
+}
+
+.title-header-nav-link:hover{
+  color: var(--white);
+}
+
+.title-header-nav-link,.title-header-nav-current{font-size: 15px;}
+
+@media only screen and (max-width: 1000px){
+  .title-header-title{font-size: 1.8rem;}
+  .title-header-nav-link,.title-header-nav-current{font-size: 14px;}
+}
+
+@media only screen and (max-width: 500px){
+  .title-header-title{font-size: 1.6rem;}
+  .title-header-nav-link,.title-header-nav-current{font-size: 12px;}
+  .title-header-container{gap: 8px;}
+}

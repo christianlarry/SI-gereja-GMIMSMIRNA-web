@@ -34,43 +34,6 @@
   margin: 2rem 0;
 }
 
-.tentang-gereja-statistik-boxs{
-  display: flex;
-  justify-content: space-evenly;
-  gap: 1rem;
-  width: 100%;
-  padding-top: 2rem;
-  font-size: 1rem;
-  flex-wrap: wrap;
-}
-
-.tentang-gereja-statistik-boxs > li{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff;
-  width: 200px;
-}
-.tentang-gereja-statistik-boxs > li .icon{
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: var(--red-primary);
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  font-size: 2em;
-  color: rgba(255, 255, 255, 0.89);
-}
-
-.tentang-gereja-statistik-boxs .tg-statistik-desc{
-  font-family: "Open Sans",sans-serif;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 @media only screen and (max-width: 925px){
   .tentang-gereja-row{
       flex-direction: column-reverse;
@@ -85,25 +48,5 @@
       width: 100%;
       max-width: 500px;
       margin: 0 auto;
-  }
-}
-
-@media only screen and (max-width: 700px){
-
-  .tentang-gereja-statistik-boxs{
-      font-size: 12px;
-  }
-
-  .tentang-gereja-statistik-boxs > li .icon{
-      width: 50px;
-      height: 50px;
-  }
-  
-  .tentang-gereja-statistik-boxs > li{
-    width: 150px;
-  }
-
-  .tentang-gereja-statistik-boxs .tg-statistik-desc{
-    font-size: 15px;
   }
 }
