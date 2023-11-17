@@ -1,0 +1,21 @@
+.error-text{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  color: var(--red-primary);
+  font-weight: 500;
+  font-family: var(--font-family-primary),sans-serif;
+  text-align: center;
+  line-height: 16px;
+  font-size: 15px;
+}
+
+.error-text i{
+  font-size: 1rem;
+}
+
+@media only screen and (max-width:500px){
+  .error-text{font-size: 13px;}
+  .error-text i{font-size: 15px;}
+}

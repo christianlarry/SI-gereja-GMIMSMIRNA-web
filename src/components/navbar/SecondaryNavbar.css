@@ -1,0 +1,31 @@
+.secondary-navbar{
+  padding: 3px;
+  border: 1px solid var(--bg-secondary-light);
+  border-radius: 5px;
+  text-align: center;
+  width: fit-content;
+}
+
+.secondary-navbar-links{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.secondary-navbar-links-item{
+  flex: 1;
+}
+
+.secondary-navbar-link{
+  padding: 10px 1.5rem;
+  background-color: var(--bg-secondary-light);
+  color: var(--white);
+  display: block;
+  transition: color 0.4s, background-color 0.4s;
+  font-family: var(--font-family-primary);
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.secondary-navbar-link:hover,.secondary-navbar-link.active{
+  background-color: var(--red-primary);
+}

@@ -1,6 +1,6 @@
-export default interface DataCountResponseModel{
-  code:number
-  message:string
+import SmirnaApiResponseModel from "./SmirnaApiResponseModel"
+
+export default interface DataCountResponseModel extends SmirnaApiResponseModel{
   data:{
     total:number
   }

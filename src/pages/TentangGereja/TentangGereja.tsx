@@ -1,4 +1,4 @@
-import MainContent from "../components/PagesComponents/TentangGereja/TentangGerejaMain"
+import MainContent from "../../components/PagesComponents/TentangGereja/TentangGerejaMain"
 
 const TentangGereja = () => (
   <main className="container">

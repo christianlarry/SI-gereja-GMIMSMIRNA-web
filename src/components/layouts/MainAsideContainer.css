@@ -1,0 +1,17 @@
+.main-aside-container{
+  display: flex;
+  gap: 2rem;
+}
+
+.main-aside-container > main{flex: 1;}
+
+@media only screen and (max-width: 1000px){
+  .main-aside-container{
+    flex-direction: column;
+  }
+
+  .main-aside-container > aside{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}

@@ -1,0 +1,26 @@
+.pp_card-swiper-pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--pagination-gap);
+  margin-top: 2rem;
+}
+
+.pp_card-swiper-container{width: 1150px;}
+
+@media only screen and (max-width: 1350px){
+  .pp_card-swiper-container{
+    width: 800px;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  .pp_card-swiper-container{width: 720px;}
+}
+
+@media only screen and (max-width: 800px){
+  .pp_card-swiper-container{
+    width: 100%;
+    max-width: 400px;
+  }
+}

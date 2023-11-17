@@ -1,4 +1,4 @@
-import MainContent from "../components/PagesComponents/SejarahGereja/SejarahGerejaMain"
+import MainContent from "../../components/PagesComponents/SejarahGereja/SejarahGerejaMain"
 
 const SejarahGereja = ()=>(
   <main>

@@ -2,7 +2,8 @@
   {
     "page": "Beranda",
     "url": "/",
-    "dropdowns": null
+    "dropdowns": null,
+    "dropdownRight": false
   },
   {
     "page": "Tentang Gereja",
@@ -16,7 +17,8 @@
         "page": "Sejarah Gereja",
         "url": "/sejarah-gereja"
       }
-    ]
+    ],
+    "dropdownRight": false
   },
   {
     "page": "Perangkat Pelayanan",
@@ -28,7 +30,7 @@
       },
       {
         "page": "BPMJ",
-        "url": "/perangkat-pelayanan/kolom"
+        "url": "/perangkat-pelayanan/bpmj"
       },
       {
         "page": "Kolom",
@@ -43,15 +45,17 @@
         "url": "/perangkat-pelayanan/komisi-kerja"
       },
       {
-        "page": "Rayon Pemuda Anak",
-        "url": "/perangkat-pelayanan/rayon-pemuda-anak"
+        "page": "Rayon P/R Anak",
+        "url": "/perangkat-pelayanan/rayon-pemuda-remaja-anak"
       }
-    ]
+    ],
+    "dropdownRight": false
   },
   {
     "page": "Data Jemaat",
     "url": "/data-jemaat",
-    "dropdowns": null
+    "dropdowns": null,
+    "dropdownRight": false
   },
   {
     "page": "Link",

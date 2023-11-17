@@ -7,6 +7,7 @@ import SectionTitle from "../../section/SectionTitle"
 import SectionTitleSep from "../../section/SectionTitleSep"
 
 import './TentangGerejaMain.css'
+import UnderlineTextButton from "../../button/UnderlineTextButton"
 
 const MainContent = () => {
   return (
@@ -61,6 +62,9 @@ const MainContent = () => {
           <StatistikCardLists/>
           <Button style={{marginTop:'3rem'}}><Link to='/data-jemaat'>Lihat Data Jemaat</Link></Button>
         </section>
+        <UnderlineTextButton style={{alignSelf:'flex-end'}}>
+          <Link to='/sejarah-gereja'>Berikutnya sejarah gereja →</Link>
+        </UnderlineTextButton>
       </div>
     </>
   )

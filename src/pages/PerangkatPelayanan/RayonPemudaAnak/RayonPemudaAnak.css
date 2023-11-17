@@ -1,0 +1,23 @@
+.pp_rayon-section-container{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.pp_rayon-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pp_rayon-card-container{
+  margin-top: 2rem;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pp_rayon-section > h2{text-align: center;}

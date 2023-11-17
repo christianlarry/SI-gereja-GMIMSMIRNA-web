@@ -1,4 +1,4 @@
-export default interface BeritaModel{
+export interface BeritaModel{
   id:number
   id_user:number
   id_category:number
@@ -12,4 +12,10 @@ export default interface BeritaModel{
   updated_date:string | null
   thumb_url:string | null
   views_count:number
+}
+
+export interface BeritaResponseModel{
+  code: number
+  data: BeritaModel[]
+  message: string
 }

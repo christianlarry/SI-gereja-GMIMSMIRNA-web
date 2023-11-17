@@ -1,6 +1,6 @@
 import { ErrorBoundary } from "react-error-boundary"
 import { Outlet, useLocation } from "react-router-dom"
-import ErrorPage from "../../pages/error/ErrorPage"
+import ErrorPage from "../../pages/ErrorPages/ErrorPage"
 import {SWRConfig} from 'swr'
 import { useEffect } from "react"
 

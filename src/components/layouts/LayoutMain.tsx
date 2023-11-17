@@ -3,15 +3,15 @@ import GoTopButton from "../button/GoTopButton"
 import Footer from "../footer/Footer"
 import Header from "../header/Header"
 import { Suspense } from "react"
-import spinner from '../../assets/images/loader/spinner-2.svg'
 
 import './LayoutMain.css'
 import TitleHeader from "../titleHeader/TitleHeader"
 import { TitleHeaderProvider } from "../titleHeader/TitleHeaderContext"
+import DataLoader from "../loader/DataLoader"
 
 const LayoutMainSuspenseFallback = ()=>(
   <div className="layout-main-suspense-fallback">
-    <img src={spinner} alt="Loading" width={50}/>
+    <DataLoader/>
   </div>
 )
 

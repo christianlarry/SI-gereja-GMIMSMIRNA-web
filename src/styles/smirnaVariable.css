@@ -7,9 +7,11 @@
     --bg-secondary-light: rgb(3, 22, 58);
     --bg-secondary-dark: rgb(0, 14, 43);
     --topbar-border-color: rgba(83, 83, 83, 0.4);
+    --black-a06: rgba(0,0,0,0.06);
     --font-family-primary: "Poppins", sans-serif;
     --font-family-secondary: "Open Sans", sans-serif;
     --text-gray: #868686;
+    --text-light-gray: #c1c1c1;
     --text-dark-gray: #5c5c5c;
     --black: #000;
     --white: #fff;
