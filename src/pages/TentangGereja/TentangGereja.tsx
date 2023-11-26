@@ -1,9 +1,12 @@
 import MainContent from "../../components/PagesComponents/TentangGereja/TentangGerejaMain"
+import FadeReveal from "../../components/reveal/FadeReveal"
 
 const TentangGereja = () => (
-  <main className="container">
-    <MainContent/>
-  </main>
+  <FadeReveal>
+    <main className="container">
+      <MainContent/>
+    </main>
+  </FadeReveal>
 )
 
 export default TentangGereja

@@ -81,8 +81,7 @@
 }
 
 @media only screen and (max-width: 800px){
-  .pg-about{flex-direction: column;gap: 2rem;}
-  .pg-about:nth-child(2){flex-direction: column;}
+  .pg-about{flex-direction: column !important;gap: 2rem;}
 }
 
 @media only screen and (max-width: 600px){

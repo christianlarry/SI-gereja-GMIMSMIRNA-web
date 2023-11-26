@@ -31,7 +31,7 @@ const StrukturBpmjSection = ()=>(
         <SlideReveal direction='y' translateFrom={50} duration={1}>
           <div style={{display:'flex',justifyContent: 'center'}}>
             <Button style={{marginTop:'2rem'}}>
-              <Link to="/perangkatpelayanan#bpmj" className="font-family-primary">Struktur BPMJ Selengkapnya</Link>
+              <Link to="/perangkat-pelayanan/bpmj" className="font-family-primary">Struktur BPMJ Selengkapnya</Link>
             </Button>
           </div>
         </SlideReveal>

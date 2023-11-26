@@ -1,3 +1,5 @@
+import SmirnaApiResponseModel from "./SmirnaApiResponseModel"
+
 export interface BeritaModel{
   id:number
   id_user:number
@@ -14,8 +16,6 @@ export interface BeritaModel{
   views_count:number
 }
 
-export interface BeritaResponseModel{
-  code: number
+export interface BeritaResponseModel extends SmirnaApiResponseModel{
   data: BeritaModel[]
-  message: string
 }

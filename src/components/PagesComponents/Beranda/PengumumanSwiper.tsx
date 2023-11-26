@@ -4,7 +4,7 @@ import {Pagination} from 'swiper/modules'
 import { SwiperOptions } from 'swiper/types'
 import useSWR from 'swr'
 import { getPengumuman } from '../../../services/api'
-import PengumumanModel from '../../../interfaces/PengumumanModel'
+import PengumumanModel from '../../../interfaces/api/PengumumanModel'
 import InternalServerError from '../../error/InternalServerError'
 
 const PengumumanSwiper = () => {

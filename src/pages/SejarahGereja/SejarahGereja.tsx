@@ -1,9 +1,12 @@
 import MainContent from "../../components/PagesComponents/SejarahGereja/SejarahGerejaMain"
+import FadeReveal from "../../components/reveal/FadeReveal"
 
 const SejarahGereja = ()=>(
-  <main>
-    <MainContent/>
-  </main>
+  <FadeReveal>
+    <main>
+      <MainContent/>
+    </main>
+  </FadeReveal>
 )
 
 export default SejarahGereja

@@ -1,3 +1,5 @@
+import './AsideTitle.css'
+
 interface AsideTitleProps extends React.HTMLAttributes<HTMLHeadingElement>{
   text:string
 }

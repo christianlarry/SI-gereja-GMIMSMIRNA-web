@@ -30,7 +30,7 @@ const TentangGerejaSection = ()=>{
               <div className="tentang-gereja-content-description">
                 <Paragraph text="Jemaat Smirna merupakan bagian dari Gereja Masehi Injili di Minahasa (GMIM) yang berkedudukan di Kelurahan Malalayang Dua Kota Manado. Jemaat Smirna masuk dalam Wilayah Manado Malalayang Barat." style={{ textAlign: 'justify' }} />
                 <Button style={{ marginTop: '1rem' }}>
-                  <Link to='/profil-gereja' className="font-family-primary">
+                  <Link to='/tentang-gereja' className="font-family-primary">
                     Lihat Selengkapnya
                   </Link>
                 </Button>
@@ -41,7 +41,7 @@ const TentangGerejaSection = ()=>{
         <FadeReveal duration={1}>
           <div className="tentang-gereja-statistik">
             <SlideReveal direction='y' translateFrom={100} duration={0.8}>
-              <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+              <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column',marginBottom: '2rem' }}>
                 <SectionTitle text="Statistik Jemaat" style={{ textAlign: 'center' }} />
                 <SectionTitleSep />
               </div>

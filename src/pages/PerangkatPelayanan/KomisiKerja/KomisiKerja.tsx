@@ -1,16 +1,18 @@
-import useSWR from "swr"
-import { getKomisiKerja } from "../../../services/api"
 import { useEffect, useState } from "react"
-import { MappedKomisiKerjaModel } from "../../../interfaces/KomisiKerjaModel"
+import { MappedKomisiKerjaModel } from "../../../interfaces/api/KomisiKerjaModel"
 import ErrorText from "../../../components/error/ErrorText"
 import { capitalizeText } from "../../../utils/stringFormat"
 import KomisiSwiperSectionContainer from "../../../components/PagesComponents/PerangkatPelayanan/KomisiSwiperSectionContainer"
 import KomisiSwiperSection from "../../../components/PagesComponents/PerangkatPelayanan/KomisiSwiperSection"
 import PPCardSwiper from "../../../components/PagesComponents/PerangkatPelayanan/PPCardSwiper"
+import usePerangkatPelayanan from "../../../hooks/usePerangkatPelayanan"
+import FadeReveal from "../../../components/reveal/FadeReveal"
 
 const KomisiKerja = ()=>{
 
-  const {data,error} = useSWR('/api/komisikerja',getKomisiKerja)
+  const {komisiKerja} = usePerangkatPelayanan()
+  const {data,error} = komisiKerja
+
   const [mappedKomisiKerja,setMappedKomisiKerja] = useState<MappedKomisiKerjaModel>()
 
   useEffect(()=>{
@@ -38,9 +40,11 @@ const KomisiKerja = ()=>{
     <main style={{minHeight:'100vh'}}>
       <KomisiSwiperSectionContainer>
         {mappedKomisiKerja && Object.keys(mappedKomisiKerja).map(key=>(
-          <KomisiSwiperSection title={capitalizeText(key.split('_').join(' '))} key={key}>
-            <PPCardSwiper data={mappedKomisiKerja[key]}/>
-          </KomisiSwiperSection>
+          <FadeReveal key={key}>
+            <KomisiSwiperSection title={capitalizeText(key.split('_').join(' '))}>
+              <PPCardSwiper data={mappedKomisiKerja[key]}/>
+            </KomisiSwiperSection>
+          </FadeReveal>
         ))}
       </KomisiSwiperSectionContainer>
     </main>

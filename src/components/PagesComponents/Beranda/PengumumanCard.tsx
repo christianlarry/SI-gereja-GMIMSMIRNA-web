@@ -1,7 +1,7 @@
 import './PengumumanCard.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faBullhorn} from '@fortawesome/free-solid-svg-icons'
-import PengumumanModel from '../../../interfaces/PengumumanModel'
+import PengumumanModel from '../../../interfaces/api/PengumumanModel'
 import { shortMonth, zeroPad } from '../../../utils/dateTimeFormat'
 import {createPortal} from 'react-dom'
 import { useState } from 'react'

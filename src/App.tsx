@@ -28,6 +28,14 @@ import 'swiper/css/effect-fade'
 import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
 
+// CHARTJS GLOBAL CONFIG
+import Chart from 'chart.js/auto'
+import {defaults,CategoryScale} from 'chart.js'
+
+Chart.register(CategoryScale)
+defaults.maintainAspectRatio = false
+defaults.responsive = true
+
 function App() {
 
 	return (
@@ -48,7 +56,7 @@ function App() {
 							<Route path='komisi-kerja' element={<PP_KomisiKerja/>}/>
 							<Route path='rayon-pemuda-remaja-anak' element={<PP_RayonPemudaAnak/>}/>
 						</Route>
-						<Route path='data-jemaat' element={<DataJemaat text='Data Jemaat'/>}/>
+						<Route path='data-jemaat' element={<DataJemaat/>}/>
 					</Route>
 				</Route>
 				<Route path='/beranda' element={<Navigate to={'/'}/>}/>

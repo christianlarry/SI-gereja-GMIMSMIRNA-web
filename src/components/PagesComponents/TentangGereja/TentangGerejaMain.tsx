@@ -58,7 +58,7 @@ const MainContent = () => {
         </section>
         <section className="pg-statistik">
           <SectionTitle text="Statistik Jemaat GMIM Smirna"/>
-          <SectionTitleSep/>
+          <SectionTitleSep style={{marginBottom: '2rem'}}/>
           <StatistikCardLists/>
           <Button style={{marginTop:'3rem'}}><Link to='/data-jemaat'>Lihat Data Jemaat</Link></Button>
         </section>

@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 import './TitleHeader.css'
 import { useEffect } from 'react'
 import { useTitleHeader } from './TitleHeaderContext'
+import { motion,useAnimationControls } from 'framer-motion'
 
 const TitleHeader = ()=>{
 
@@ -33,16 +34,26 @@ const TitleHeader = ()=>{
     setTitle(pageTitleFormat(urlPathArr[urlPathArr.length-1]))
   },[location])
 
+  // ANIMATION
+  const controls = useAnimationControls()
+  useEffect(()=>{
+    controls.set({opacity: 0})
+    controls.start({
+      opacity: 1,
+      transition:{ease:'easeInOut',duration:0.6}
+    })
+  },[title])
+
   return (
     <section className='title-header'>
-      <div className="title-header-container container">
+      <motion.div animate={controls} className="title-header-container container">
         <div className='title-header-nav'>
           <Link className='title-header-nav-link' to='/'>Beranda</Link>
           {titleHeaderNavData.map((link,i)=><Link key={i} className='title-header-nav-link' to={link.url}>{link.pageTitle}</Link>)}
           <span className='title-header-nav-current'>{title}</span>
         </div>
         <h2 className='title-header-title'>{title}</h2>
-      </div>
+      </motion.div>
     </section>
   )
 }

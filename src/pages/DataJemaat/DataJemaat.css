@@ -1,0 +1,52 @@
+.data-jemaat_statistik-aj{
+  display: flex;
+  gap: 2rem;
+}
+
+.data-jemaat_statistik-aj-start{
+  flex: 1;
+}
+.data-jemaat_statistik-aj-end{
+  width: 250px;
+}
+
+.data-jemat_chart-pb-container{
+  display: flex;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.data-jemaat_jk-chart{
+  width: 300px;
+  height: 200px;
+}
+
+.data-jemaat_bs-pb{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1000px){
+  .data-jemaat_statistik-aj{
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .data-jemaat_statistik-aj-end{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .data-jemat_chart-pb-container{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .data-jemaat_jk-chart{
+    width: 100%;
+  }
+}

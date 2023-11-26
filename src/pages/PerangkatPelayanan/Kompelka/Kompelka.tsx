@@ -1,15 +1,15 @@
 import { useTitleHeader } from "../../../components/titleHeader/TitleHeaderContext"
 
 import { useEffect, useState } from "react"
-import { getKompelka } from "../../../services/api"
-import useSWR from "swr"
-import { MappedKomisiKategorialModel } from "../../../interfaces/KomisiKategorialModel"
+import { MappedKomisiKategorialModel } from "../../../interfaces/api/KomisiKategorialModel"
 import ErrorText from "../../../components/error/ErrorText"
 import { useLocation } from "react-router-dom"
 import PPCardSwiper from "../../../components/PagesComponents/PerangkatPelayanan/PPCardSwiper"
 import KomisiSwiperSection from "../../../components/PagesComponents/PerangkatPelayanan/KomisiSwiperSection"
 import KomisiSwiperSectionContainer from "../../../components/PagesComponents/PerangkatPelayanan/KomisiSwiperSectionContainer"
 import { capitalizeText } from "../../../utils/stringFormat"
+import usePerangkatPelayanan from "../../../hooks/usePerangkatPelayanan"
+import FadeReveal from "../../../components/reveal/FadeReveal"
 
 const Kompelka = ()=>{
 
@@ -19,7 +19,9 @@ const Kompelka = ()=>{
   useEffect(()=>setTitle('Komisi Pelayanan Kategorial'),[location])
 
   // FETCH DATA
-  const {data,error} = useSWR('/api/komisikategorial',getKompelka)
+  const {kompelka} = usePerangkatPelayanan()
+  const {data,error} = kompelka
+
   const [mappedKompelka,setMappedKompelka] = useState<MappedKomisiKategorialModel>()
 
   useEffect(()=>{
@@ -49,24 +51,13 @@ const Kompelka = ()=>{
   return (
     <main style={{minHeight:'100vh'}}>
       <KomisiSwiperSectionContainer>
-        {mappedKompelka &&
-        <>
-          <KomisiSwiperSection title="Komisi Pelayanan Bapak">
-            <PPCardSwiper data={mappedKompelka.bapak}/>
-          </KomisiSwiperSection>
-          <KomisiSwiperSection title="Komisi Pelayanan Ibu">
-            <PPCardSwiper data={mappedKompelka.ibu}/>
-          </KomisiSwiperSection>
-          <KomisiSwiperSection title="Komisi Pelayanan Pemuda">
-            <PPCardSwiper data={mappedKompelka.pemuda}/>
-          </KomisiSwiperSection>
-          <KomisiSwiperSection title="Komisi Pelayanan Remaja">
-            <PPCardSwiper data={mappedKompelka.remaja}/>
-          </KomisiSwiperSection>
-          <KomisiSwiperSection title="Komisi Pelayanan Anak">
-            <PPCardSwiper data={mappedKompelka.anak}/>
-          </KomisiSwiperSection>
-        </>
+        {mappedKompelka && Object.keys(mappedKompelka).map(key=>(
+          <FadeReveal key={key}>
+            <KomisiSwiperSection title={`Komisi Pelayanan ${capitalizeText(key)}`}>
+              <PPCardSwiper data={mappedKompelka[key]}/>
+            </KomisiSwiperSection>
+          </FadeReveal>
+        ))
         }
       </KomisiSwiperSectionContainer>
     </main>

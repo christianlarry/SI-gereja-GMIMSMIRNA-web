@@ -8,6 +8,7 @@ import './LayoutMain.css'
 import TitleHeader from "../titleHeader/TitleHeader"
 import { TitleHeaderProvider } from "../titleHeader/TitleHeaderContext"
 import DataLoader from "../loader/DataLoader"
+import FadeReveal from "../reveal/FadeReveal"
 
 const LayoutMainSuspenseFallback = ()=>(
   <div className="layout-main-suspense-fallback">
@@ -19,17 +20,19 @@ const LayoutMain = ({children}:{children?:React.ReactNode})=>{
 
   return (
     <TitleHeaderProvider>
-      <div className="layout-main-wrapper">
-        <div className="layout-main-top">
-          <Header />
-          <TitleHeader/>
-          <Suspense fallback={<LayoutMainSuspenseFallback/>}>
-            {children ? children : <Outlet/>}
-          </Suspense>
+      <FadeReveal>
+        <div className="layout-main-wrapper">
+          <div className="layout-main-top">
+            <Header />
+            <TitleHeader/>
+            <Suspense fallback={<LayoutMainSuspenseFallback/>}>
+              {children ? children : <Outlet/>}
+            </Suspense>
+          </div>
+          <Footer/>
+          <GoTopButton/>
         </div>
-        <Footer/>
-        <GoTopButton/>
-      </div>
+      </FadeReveal>
     </TitleHeaderProvider>
   )
 }

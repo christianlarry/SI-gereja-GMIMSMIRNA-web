@@ -1,0 +1,31 @@
+.data-jemaat_bl-lists{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.data-jemaat_bl-lists>li:not(:last-child){
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.data-jemaat_bl-lists>li{
+  display: flex;
+  justify-content: space-between;
+}
+
+.data-jemaat_bl-total{
+  padding: 2px 8px !important;
+  line-height: 20px;
+}
+
+.data-jemaat_bl-percentage{
+  font-family: var(--font-family-primary);
+}
+
+@media only screen and (max-width: 1000px){
+  .data-jemaat_bl-desc{
+    font-size: 13px;
+  }
+}
