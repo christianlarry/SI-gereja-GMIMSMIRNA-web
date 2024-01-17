@@ -1,4 +1,4 @@
-import {MouseEvent, useState, useRef, forwardRef} from 'react'
+import {useState, useRef, forwardRef, useEffect} from 'react'
 import BurgerButton from '../button/BurgerButton'
 import './Navbar.css'
 import HeaderSearchBox from './HeaderSearchBox'
@@ -7,27 +7,37 @@ import NavItem from './NavItem'
 import SmirnaMalabarLogo from '../SmirnaMalabarLogo'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { useLocation } from 'react-router-dom'
 
 const Navbar = forwardRef<HTMLElement,{beranda?:boolean,isSticky:boolean}>(({beranda,isSticky},ref) => {
+
+	const location = useLocation()
+
 	// STATE
-	const [isBurgerMenuActive, setisBurgerMenuActive] = useState<Boolean>(false)
+	const [isBurgerMenuActive, setisBurgerMenuActive] = useState<boolean>(false)
 
 	// REF
 	const navSearchBtnRef:React.RefObject<HTMLElement> = useRef(null)
 
-	const handleBurgerBtnClick = (_e:MouseEvent,state:Boolean)=>{
-		setisBurgerMenuActive(state)
-	}
+	// EFFECT
+	useEffect(()=>{
+		if(isBurgerMenuActive) return document.body.classList.add('overflow-h')
+		document.body.classList.remove('overflow-h')
+	},[isBurgerMenuActive])
+
+	useEffect(()=>{
+		setisBurgerMenuActive(false)
+	},[location])
 
 	return (
 		<nav className={`navbar${!beranda ? ' main-navbar sticky' :''}${isSticky ? ' sticky':''}`} ref={ref}>
 			<div className="container nav-wrapper">
 
-				<BurgerButton onClick={handleBurgerBtnClick}/>
+				<BurgerButton active={isBurgerMenuActive} onClick={()=>setisBurgerMenuActive(!isBurgerMenuActive)}/>
 
 				<SmirnaMalabarLogo className='nav-logo'/>
 
-				<ul className={`nav-links h-full ${isBurgerMenuActive && 'active'}`}>
+				<ul className={`nav-links h-full ${isBurgerMenuActive ? 'active':''}`}>
 
 					{navigationLinks.map((value,i)=> <NavItem data={value} key={i}/>)}
 

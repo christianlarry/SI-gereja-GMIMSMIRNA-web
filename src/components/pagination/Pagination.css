@@ -1,0 +1,13 @@
+.pagination-container{
+  display: flex;
+  justify-content: center;
+  gap: var(--pagination-gap);
+  flex-wrap: wrap;
+}
+
+.pagination-index{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--pagination-gap);
+}

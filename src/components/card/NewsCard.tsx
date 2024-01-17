@@ -6,6 +6,8 @@ import { faClock, faUser } from '@fortawesome/free-regular-svg-icons'
 import Paragraph from '../Paragraph'
 import { shortMonth, zeroPad } from '../../utils/dateTimeFormat'
 import { BeritaModel } from '../../interfaces/api/BeritaModel'
+import { blankThumbnailUrl } from '../../services/api'
+import { faBookOpenReader } from '@fortawesome/free-solid-svg-icons'
 
 interface NewsCardProps{
   berita:BeritaModel
@@ -17,10 +19,10 @@ const NewsCard = ({berita}:NewsCardProps) => {
   return (
     <div className="berita-card">
       <div className="berita-card-image-wrapper">
-        <img src={berita.thumb_url ? berita.thumb_url : '/images/no_berita_thumbnail.jpg'} alt={`Thumbnail berita ${berita.news_title}`} loading="lazy" className="berita-card-image" />
+        <img src={berita.thumb_url || blankThumbnailUrl} alt={`Thumbnail berita ${berita.news_title}`} loading="lazy" className="berita-card-image" />
       </div>
       <div className="berita-card-wrapper">
-        <a href={`/berita/${berita.id}`} className="berita-card-title" title={berita.news_title}>{berita.news_title}</a>
+        <Link to={`/berita/${berita.id}`} className="berita-card-title" title={berita.news_title}>{berita.news_title}</Link>
         <div className="berita-card-data">
           <span className="berita-card-date">
             <i><FontAwesomeIcon icon={faClock}/></i>
@@ -29,6 +31,10 @@ const NewsCard = ({berita}:NewsCardProps) => {
           <span className="berita-card-author">
             <i><FontAwesomeIcon icon={faUser}/></i>
             {berita.author}
+          </span>
+          <span>
+            <i><FontAwesomeIcon icon={faBookOpenReader}/></i>
+            {berita.views_count}
           </span>
         </div>
         <div className="berita-card-content">

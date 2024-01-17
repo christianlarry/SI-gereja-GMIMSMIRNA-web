@@ -1,0 +1,29 @@
+.pagination-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: var(--red-primary);
+  border-radius: 5px;
+  color: var(--white);
+  font-family: var(--font-family-primary);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 14px;
+}
+
+.pagination-btn[disabled]{
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.pagination-btn:hover{
+  background-color: var(--red-primary-hover);
+}
+
+.pagination-btn.active{
+  background-color: var(--bg-secondary-light);
+}

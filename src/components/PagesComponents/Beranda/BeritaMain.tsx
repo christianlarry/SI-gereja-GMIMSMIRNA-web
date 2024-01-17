@@ -1,5 +1,3 @@
-import { getBerita } from '../../../services/api'
-import useSWR from 'swr'
 import NewsCard from '../../card/NewsCard'
 import DataNotFound from '../../error/DataNotFound'
 import DataLoader from '../../loader/DataLoader'
@@ -7,6 +5,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { SwiperOptions } from 'swiper/types'
 import { Pagination } from 'swiper/modules'
 import InternalServerError from '../../error/InternalServerError'
+
+// API
+import handleRefreshBerita from '../../../services/handleRefreshBerita'
+import { getBerita } from '../../../services/api'
 
 const BeritaMain = ()=>{
   // SWIPER PROPS
@@ -35,14 +37,14 @@ const BeritaMain = ()=>{
   }
 
   // SWR 
-  const {data,error,isLoading,mutate} = useSWR('/api/berita',getBerita,{revalidateOnFocus: true})
+  const {data,error,isLoading,mutate} = getBerita('page=1&limit=6')
 
   if(isLoading) return <DataLoader message='Mendapatkan Berita...'/>
 
-  if(error || !data) return <InternalServerError message='Tidak bisa mendapatkan berita.' refreshMessage='Refresh berita' onRefresh={mutate}/>
+  if(error || !data) return <InternalServerError message='Tidak bisa mendapatkan berita.' refreshMessage='Refresh berita' onRefresh={handleRefreshBerita(mutate)}/>
 
-  const berita = data.data.data
-  if(berita.length === 0) return <DataNotFound message='Belum ada berita yang diposting.' refreshMessage='Refresh berita' onRefresh={mutate}/>
+  const berita = data.data
+  if(berita.length === 0) return <DataNotFound message='Belum ada berita yang diposting.' refreshMessage='Refresh berita' onRefresh={handleRefreshBerita(mutate)}/>
 
   return (
     <>

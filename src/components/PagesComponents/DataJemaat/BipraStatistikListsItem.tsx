@@ -9,7 +9,7 @@ interface Props{
 const BipraStatistikListsItem = ({kategori,total,persentase}:Props) => (
   <li>
     <div>
-      <Button style={{
+      <Button tabIndex={-1} style={{
         cursor: 'pointer',
         pointerEvents: 'none',
         marginRight: '5px',

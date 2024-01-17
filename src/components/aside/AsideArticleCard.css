@@ -1,0 +1,61 @@
+.aside-berita-item{
+  display: flex;
+  gap: 0.8rem;
+}
+
+.aside-berita-item:hover .aside-berita-image{
+  transform: scale(1.1);
+}
+
+.aside-berita-item:hover .aside-berita-data-title{
+  text-decoration: underline;
+}
+
+.aside-berita-image-wrapper{
+  overflow: hidden;
+}
+
+.aside-berita-image{
+  aspect-ratio: 1/1;
+  width: 80px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.2s;
+}
+
+.aside-berita-data{
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-berita-data-title{
+  font-size: 1rem;
+  font-weight: 600;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+  overflow: hidden;
+}
+
+.aside-berita-data-detail{
+  font-size: 14px;
+  color: var(--text-gray);
+}
+
+.aside-berita-data-detail i{
+  color: var(--red-primary);
+  margin-right: 5px;
+}
+
+@media only screen and (max-width:1000px){
+  .aside-berita-data-detail{
+    font-size: 13px;
+  }
+  .aside-berita-data-title{
+    font-size: 0.9rem;
+  }
+}

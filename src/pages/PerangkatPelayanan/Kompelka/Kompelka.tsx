@@ -27,17 +27,17 @@ const Kompelka = ()=>{
   useEffect(()=>{
     if(data){
       // REFORMATTING TEXT JABATAN & NAMA LENGKAP
-      data.data.data.forEach(value =>{
+      data.data.forEach(value =>{
         value.jabatan = capitalizeText(value.jabatan.split('-').join(' '))
         const namaLengkapArr = value.nama_lengkap.split(' ')
         value.nama_lengkap = namaLengkapArr[0]+' '+namaLengkapArr[namaLengkapArr.length-1]
       })
 
       const mappedData:MappedKomisiKategorialModel = {}
-      const komisiPelayanan = [...new Set(data.data.data.map(value=>value.komisi_pelayanan))]
+      const komisiPelayanan = [...new Set(data.data.map(value=>value.komisi_pelayanan))]
 
       komisiPelayanan.forEach(value=>{
-        mappedData[value] = data.data.data.filter(dat => dat.komisi_pelayanan === value)
+        mappedData[value] = data.data.filter(dat => dat.komisi_pelayanan === value)
       })
 
       setMappedKompelka(mappedData)

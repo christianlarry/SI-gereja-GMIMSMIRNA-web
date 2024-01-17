@@ -32,19 +32,19 @@ const Kolom = ()=>{
   useEffect(()=>{
     // SET FIRST KOLOM TO SHOW (KOLOM 1)
     if(data) {
-      data.data.data.forEach(value=>{
+      data.data.forEach(value=>{
         const penatuaArr = value.penatua.nama_lengkap.split(' ')
         const diakenArr = value.diaken.nama_lengkap.split(' ')
         value.penatua.nama_lengkap = penatuaArr[0]+' '+penatuaArr[penatuaArr.length-1]
         value.diaken.nama_lengkap = diakenArr[0]+' '+diakenArr[diakenArr.length-1]
       })
-      setSelectedKolom(data.data.data[0].id)
+      setSelectedKolom(data.data[0].id)
     }
   },[data])
 
   const setSelectedKolom = (idKolom:number)=>{
     if(data){
-      const selectedKolom = data.data.data.filter(value=>value.id === idKolom)[0]
+      const selectedKolom = data.data.filter(value=>value.id === idKolom)[0]
   
       setKolom(selectedKolom)
     }
@@ -78,7 +78,7 @@ const Kolom = ()=>{
             <AsideTitle className="pp_kolom-aside-title" text="Kolom"/>
             {(data && !error) &&
               <AsideLinkLists className="pp_kolom-lists">
-                {data.data.data.map(kol=>(
+                {data.data.map(kol=>(
                   <AsideLinkListsItem key={kol.id}>
                     <span className={(kolom?.id === kol.id)?'active':undefined} onClick={()=>setSelectedKolom(kol.id)}>Kolom {kol.kolom}</span>
                   </AsideLinkListsItem>

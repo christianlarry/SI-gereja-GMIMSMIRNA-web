@@ -27,7 +27,7 @@ const ProgressBarChartItem = ({
     <div className="data-progress-bar" {...props}>
       <div className="data-progress-bar-data">
         <div>
-          <Button className='data-progress-bar-total-container' style={{backgroundColor: color}}>
+          <Button tabIndex={-1} className='data-progress-bar-total-container' style={{backgroundColor: color}}>
             <span className='data-progress-bar-total'>{currentData}</span>
           </Button>
           <h2 className='data-progress-bar-desc'>{desc}</h2>

@@ -1,4 +1,3 @@
-import useSWR from "swr"
 import PieChart from "../../components/chart/PieChart"
 import FadeReveal from "../../components/reveal/FadeReveal"
 import { getStatistikAnggotaJemaat } from "../../services/api"
@@ -11,7 +10,7 @@ import ProgressBarChartItem from "../../components/chart/ProgressBarChartItem"
 import BipraStatistik from "../../components/PagesComponents/DataJemaat/BipraStatistik"
 
 const DataJemaat = () => {
-  const { data, error, isLoading } = useSWR('/api/anggotajemaat/statistik', getStatistikAnggotaJemaat)
+  const { data, error, isLoading } = getStatistikAnggotaJemaat()
 
   if (isLoading) return <DataLoader />
 
@@ -31,22 +30,21 @@ const DataJemaat = () => {
                     {
                       label: 'Total Anggota Jemaat',
                       data: [
-                        data.data.data.laki_laki,
-                        data.data.data.perempuan
-                      ],
-                      borderWidth: 1
+                        data.data.laki_laki,
+                        data.data.perempuan
+                      ]
                     }
                   ]
                 }} />
               </div>
               <div className="data-jemaat_bs-pb">
-                <ProgressBarChartItem targetData={data.data.data.total} currentData={data.data.data.jumlah_baptis} desc="Jemaat Baptis" />
-                <ProgressBarChartItem targetData={data.data.data.total} currentData={data.data.data.jumlah_sidi} desc="Sidi Jemaat" />
+                <ProgressBarChartItem targetData={data.data.total} currentData={data.data.jumlah_baptis} desc="Jemaat Baptis" />
+                <ProgressBarChartItem targetData={data.data.total} currentData={data.data.jumlah_sidi} desc="Sidi Jemaat" />
               </div>
             </div>
           </div>
           <div className="data-jemaat_statistik-aj-end">
-            <BipraStatistik data={data.data.data}/>
+            <BipraStatistik data={data.data}/>
           </div>
         </section>
       </main>

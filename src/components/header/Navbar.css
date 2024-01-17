@@ -140,10 +140,6 @@
         display: flex;
     }
 
-    .nav-links{
-        display: none;
-    }
-
     .nav-search-box{
         display: block;
     }
@@ -180,6 +176,7 @@
         overflow-y: auto;
         transition: 0.6s ease-in-out;
         opacity: 0;
+        padding-bottom: 2rem;
     }
 
     .nav-links.active{

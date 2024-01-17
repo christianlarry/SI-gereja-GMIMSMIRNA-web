@@ -34,17 +34,17 @@ const RayonPemudaAnak = ()=>{
 
   useEffect(()=>{
     if(data){
-      data.data.data.forEach(value=>{
+      data.data.forEach(value=>{
         value.jabatan = capitalizeText(value.jabatan.split('-').join(' '))
         const namaLengkapArr = value.nama_lengkap.split(' ')
         value.nama_lengkap = namaLengkapArr[0]+' '+namaLengkapArr[namaLengkapArr.length-1]
       })
 
       const mappedData:MappedPengurusRayonModel = {}
-      const rayon = [...new Set(data.data.data.map(value =>value.rayon))]
+      const rayon = [...new Set(data.data.map(value =>value.rayon))]
 
       rayon.forEach(key=>{
-        mappedData[key.split('-').join('_')] = data.data.data.filter(value => value.rayon === key)
+        mappedData[key.split('-').join('_')] = data.data.filter(value => value.rayon === key)
       })
 
       setMappedPengurusRayon(mappedData)

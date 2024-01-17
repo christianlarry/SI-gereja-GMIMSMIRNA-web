@@ -17,8 +17,11 @@ export const TitleHeaderProvider = ({children}:{children:React.ReactNode})=>{
   const [title,setTitle] = useState<string>('-')
 
   return (
-    <TitleHeaderContext.Provider value={{title,setTitle}}>
-      {children}
+    <TitleHeaderContext.Provider value={{
+      title,
+      setTitle
+      }}>
+        {children}
     </TitleHeaderContext.Provider>
   )
 }

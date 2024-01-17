@@ -2,10 +2,9 @@ import PengumumanCard from './PengumumanCard'
 import {Swiper,SwiperSlide} from "swiper/react"
 import {Pagination} from 'swiper/modules'
 import { SwiperOptions } from 'swiper/types'
-import useSWR from 'swr'
 import { getPengumuman } from '../../../services/api'
-import PengumumanModel from '../../../interfaces/api/PengumumanModel'
 import InternalServerError from '../../error/InternalServerError'
+import { toastError } from '../../../utils/toast'
 
 const PengumumanSwiper = () => {
   const swiperProps: SwiperOptions = {
@@ -26,20 +25,28 @@ const PengumumanSwiper = () => {
     }
   }
 
-  const {data,error,mutate} = useSWR('/api/pengumuman',getPengumuman,{revalidateOnFocus: true})
-  const pengumuman = data?.data.data as PengumumanModel[]
+  const {data,error,mutate} = getPengumuman({revalidateOnFocus: true})
+
+  const handleRefresh = ()=>{
+    mutate()
+      .then(val=>{
+        if(val && val.data.length === 0) return toastError('Belum ada pengumuman yang diposting')
+        toastError('Terjadi kesalahan saat mendapatkan data')
+      })
+      .catch(()=>toastError('Terjadi kesalahan saat mendapatkan data'))
+  }
 
   if(error) return (
     <div style={{width:'100%',position:'relative',textAlign:'center',top:50}}>
       <div>
-        <InternalServerError message='Tidak bisa mendapatkan pengumuman.' refreshMessage='Refresh Pengumuman' onRefresh={mutate}/>
+        <InternalServerError message='Tidak bisa mendapatkan pengumuman.' refreshMessage='Refresh Pengumuman' onRefresh={handleRefresh}/>
       </div>
     </div>
   )
 
   return (
     <Swiper {...swiperProps}>
-      {pengumuman && pengumuman.map((data)=>(
+      {data && data.data.map((data)=>(
         <SwiperSlide key={data.id}>
           <PengumumanCard data={data}/>
         </SwiperSlide>

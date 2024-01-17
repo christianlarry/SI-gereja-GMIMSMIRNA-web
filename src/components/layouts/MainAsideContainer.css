@@ -1,6 +1,7 @@
 .main-aside-container{
   display: flex;
   gap: 2rem;
+  justify-content: space-between;
 }
 
 .main-aside-container > main{flex: 1;}

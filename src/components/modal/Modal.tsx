@@ -23,10 +23,10 @@ const Modal = ({children,size,onClose,closeOnOutsideClick,noXMark,notCloseable}:
 
   // EFFECT
   useEffect(() => {
-    document.body.classList.add('modal-active')
+    document.body.classList.add('overflow-h')
 
     return () => {
-      document.body.classList.remove('modal-active')
+      document.body.classList.remove('overflow-h')
     }
   }, [])
 

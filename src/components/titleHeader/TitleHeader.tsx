@@ -49,7 +49,11 @@ const TitleHeader = ()=>{
       <motion.div animate={controls} className="title-header-container container">
         <div className='title-header-nav'>
           <Link className='title-header-nav-link' to='/'>Beranda</Link>
-          {titleHeaderNavData.map((link,i)=><Link key={i} className='title-header-nav-link' to={link.url}>{link.pageTitle}</Link>)}
+
+          {titleHeaderNavData.map((link,i)=>
+          <Link key={i} className='title-header-nav-link' to={link.url}>{link.pageTitle}</Link>
+          )}
+
           <span className='title-header-nav-current'>{title}</span>
         </div>
         <h2 className='title-header-title'>{title}</h2>

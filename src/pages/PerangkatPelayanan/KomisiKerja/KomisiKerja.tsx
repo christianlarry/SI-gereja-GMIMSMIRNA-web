@@ -17,17 +17,17 @@ const KomisiKerja = ()=>{
 
   useEffect(()=>{
     if(data){
-      data.data.data.forEach(value=>{
+      data.data.forEach(value=>{
         value.jabatan = capitalizeText(value.jabatan.split('-').join(' '))
         const namaLengkapArr = value.nama_lengkap.split(' ')
         value.nama_lengkap = namaLengkapArr[0]+' '+namaLengkapArr[namaLengkapArr.length-1]
       })
 
-      const kategori = [...new Set(data.data.data.map(value=>value.kategori))]
+      const kategori = [...new Set(data.data.map(value=>value.kategori))]
       const mappedData:MappedKomisiKerjaModel = {}
       
       kategori.forEach(value=>{
-        mappedData[value.split('-').join('_')] = data.data.data.filter(dat=>dat.kategori === value)
+        mappedData[value.split('-').join('_')] = data.data.filter(dat=>dat.kategori === value)
       })
 
       setMappedKomisiKerja(mappedData)

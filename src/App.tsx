@@ -13,6 +13,7 @@ const PP_Kolom = lazy(()=>import('./pages/PerangkatPelayanan/Kolom'))
 const PP_Kompelka = lazy(()=>import('./pages/PerangkatPelayanan/Kompelka'))
 const PP_KomisiKerja = lazy(()=>import('./pages/PerangkatPelayanan/KomisiKerja'))
 const PP_RayonPemudaAnak = lazy(()=>import('./pages/PerangkatPelayanan/RayonPemudaAnak'))
+const Berita = lazy(()=>import('./pages/Berita'))
 
 import LayoutContainer from './components/layouts/LayoutContainer'
 import LayoutBeranda from './components/layouts/LayoutBeranda'
@@ -27,6 +28,9 @@ import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
+
+// REACT TOASTIFY STYLES
+import 'react-toastify/ReactToastify.min.css'
 
 // CHARTJS GLOBAL CONFIG
 import Chart from 'chart.js/auto'
@@ -57,6 +61,7 @@ function App() {
 							<Route path='rayon-pemuda-remaja-anak' element={<PP_RayonPemudaAnak/>}/>
 						</Route>
 						<Route path='data-jemaat' element={<DataJemaat/>}/>
+						<Route path='berita' element={<Berita/>}/>
 					</Route>
 				</Route>
 				<Route path='/beranda' element={<Navigate to={'/'}/>}/>

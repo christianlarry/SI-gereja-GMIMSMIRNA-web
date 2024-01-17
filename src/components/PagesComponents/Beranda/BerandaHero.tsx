@@ -40,7 +40,7 @@ const BerandaHero = () => {
             <div className="category">
               <div className="category-menu">
                 <Button tabIndex={-1}>
-                  <Link to="/berita">
+                  <Link to="/berita?halaman=1">
                     <i><FontAwesomeIcon icon={faNewspaper}/></i>Berita
                   </Link>
                 </Button>

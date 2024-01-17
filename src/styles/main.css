@@ -31,6 +31,7 @@ main{display: flex;flex-direction: column;gap: 8rem;}
 .text-gray{color: var(--text-gray) !important;}
 .text-primary{color: var(--red-primary) !important;}
 .font-family-primary{font-family: var(--font-family-primary);}
+.overflow-h{overflow: hidden;}
 
 .smirna-btn{
     background: none;

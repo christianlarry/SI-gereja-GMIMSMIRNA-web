@@ -16,6 +16,15 @@ export interface BeritaModel{
   views_count:number
 }
 
+export interface KategoriBeritaModel{
+  id:number
+  nama:string
+}
+
 export interface BeritaResponseModel extends SmirnaApiResponseModel{
   data: BeritaModel[]
+}
+
+export interface KategoriBeritaResponseModel extends SmirnaApiResponseModel{
+  data: KategoriBeritaModel[]
 }

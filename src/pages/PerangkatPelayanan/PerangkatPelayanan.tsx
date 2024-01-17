@@ -3,8 +3,7 @@ import SecondaryNavbar from "../../components/navbar/SecondaryNavbar"
 import smirnaNavDropdowns from '../../data/getNavigationDropdowns'
 import { Suspense, createContext } from "react"
 import DataLoader from "../../components/loader/DataLoader"
-import useSWR, { SWRResponse } from "swr"
-import { AxiosResponse } from "axios"
+import { SWRResponse } from "swr"
 
 import { getKolom, getKomisiKerja, getKompelka, getPengurusRayon } from "../../services/api"
 
@@ -15,10 +14,10 @@ import { PengurusRayonResponseModel } from "../../interfaces/api/PengurusRayonMo
 import FadeReveal from "../../components/reveal/FadeReveal"
 
 interface PerangkatPelayananContextType{
-  kolom:SWRResponse<AxiosResponse<KolomResponseModel,any>,any,any>
-  kompelka:SWRResponse<AxiosResponse<KomisiKategorialResponseModel,any>,any,any>
-  komisiKerja:SWRResponse<AxiosResponse<KomisiKerjaResponseModel,any>,any,any>
-  pengurusRayon:SWRResponse<AxiosResponse<PengurusRayonResponseModel,any>,any,any>
+  kolom:SWRResponse<KolomResponseModel,any,any>
+  kompelka:SWRResponse<KomisiKategorialResponseModel,any,any>
+  komisiKerja:SWRResponse<KomisiKerjaResponseModel,any,any>
+  pengurusRayon:SWRResponse<PengurusRayonResponseModel,any,any>
 }
 
 export const PerangkatPelayananContext = createContext<PerangkatPelayananContextType | undefined>(undefined)
@@ -28,10 +27,10 @@ const PerangkatPelayanan = () => {
   const perangkatPelayananDropdowns = smirnaNavDropdowns('/perangkat-pelayanan')!
   const location = useLocation()
 
-  const SWRKolom = useSWR('/api/kolom',getKolom)
-  const SWRKompelka = useSWR('/api/komisikategorial',getKompelka)
-  const SWRKomisiKerja = useSWR('/api/komisikerja',getKomisiKerja)
-  const SWRPengurusRayon = useSWR('/api/pengurusrayon',getPengurusRayon)
+  const SWRKolom = getKolom()
+  const SWRKompelka = getKompelka()
+  const SWRKomisiKerja = getKomisiKerja()
+  const SWRPengurusRayon = getPengurusRayon()
 
   return (
     <PerangkatPelayananContext.Provider value={{
