@@ -45,7 +45,7 @@ const Kompelka = ()=>{
   },[data])
 
   if(error) return (<div>
-    <ErrorText text="Terjadi kesalahan saat mendapatkan data Komisi Kategorial! Silahkan refresh halaman atau kembali dalam beberapa saat."/>
+    <ErrorText text="Terjadi kesalahan saat mendapatkan data Komisi Kategorial!"/>
   </div>)
 
   return (

@@ -3,6 +3,14 @@
   font-family: var(--font-family-primary),sans-serif;
 }
 
+.section-title[data-size="md"]{
+  font-size: 1.6rem;
+}
+
+.section-title[data-size="sm"]{
+  font-size: 1.3rem;
+}
+
 @media only screen and (max-width:1000px){
   .section-title{
     font-size: 1.6rem !important;

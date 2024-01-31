@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { PerangkatPelayananContext } from "../pages/PerangkatPelayanan/PerangkatPelayanan";
+import { PerangkatPelayananContext } from "../components/layouts/pageLayouts/LayoutPerangkatPelayanan";
 
 export default function usePerangkatPelayanan(){
   const context = useContext(PerangkatPelayananContext)

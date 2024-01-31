@@ -10,7 +10,7 @@ import InternalServerError from '../../error/InternalServerError'
 import handleRefreshBerita from '../../../services/handleRefreshBerita'
 import { getBerita } from '../../../services/api'
 
-const BeritaMain = ()=>{
+const BeritaSectionMain = ()=>{
   // SWIPER PROPS
   const beritaSwiperProps:SwiperOptions = {
     modules: [Pagination],
@@ -37,7 +37,7 @@ const BeritaMain = ()=>{
   }
 
   // SWR 
-  const {data,error,isLoading,mutate} = getBerita('page=1&limit=6')
+  const {data,error,isLoading,mutate} = getBerita('page=1&limit=9')
 
   if(isLoading) return <DataLoader message='Mendapatkan Berita...'/>
 
@@ -60,4 +60,4 @@ const BeritaMain = ()=>{
   )
 }
 
-export default BeritaMain
+export default BeritaSectionMain

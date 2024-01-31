@@ -1,4 +1,5 @@
 import './FetchError.css'
+import NotFoundErrorLogo from './logo/NotFoundErrorLogo'
 
 interface DataNotFoundProps extends React.HTMLAttributes<HTMLDivElement>{
   message:string
@@ -14,10 +15,7 @@ const DataNotFound = ({message,className,refreshMessage,onRefresh,...props}:Data
 
   return (
     <div className={`fetch-error-wrapper${className ? ' '+className : ''}`} {...props}>
-      <div className='fetch-error-title'>
-        <h2>4<span>0</span>4</h2>
-        <span>Not Found</span>
-      </div>
+      <NotFoundErrorLogo/>
       <span className='fetch-error-status'>Data Tidak Ditemukan</span>
       <span className='fetch-error-message'>
         {message}

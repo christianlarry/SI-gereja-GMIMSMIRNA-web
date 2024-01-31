@@ -1,0 +1,6 @@
+.input-label{
+  display: inline-block;
+  margin-bottom: 5px;
+  font-family: var(--font-family-primary);
+  font-size: 14px;
+}

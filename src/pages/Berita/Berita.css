@@ -11,3 +11,9 @@
   gap: 3rem;
   justify-content: center;
 }
+
+@media only screen and (max-width: 600px){
+  .berita-wrapper{
+    gap: 1.8rem;
+  }
+}

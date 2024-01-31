@@ -1,0 +1,30 @@
+.span-text{
+  font-size: 16px;
+}
+
+.span-text[data-size="md"]{
+  font-size: 15px;
+}
+
+.span-text[data-size="sm"]{
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 1000px){
+  .span-text{font-size: 14px;}
+  .span-text[data-size="md"]{
+    font-size: 13px;
+  }
+  .span-text[data-size="sm"]{
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 500px){
+  .span-text{font-size: 12px;}
+  .span-text[data-size="md"]{
+    font-size: 12px;
+  }
+  .span-text[data-size="sm"]{
+    font-size: 12px;
+  }
+}

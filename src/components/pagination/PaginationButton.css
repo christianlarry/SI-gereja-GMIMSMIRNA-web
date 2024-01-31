@@ -27,3 +27,11 @@
 .pagination-btn.active{
   background-color: var(--bg-secondary-light);
 }
+
+@media only screen and (max-width: 500px){
+  .pagination-btn{
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+  }
+}

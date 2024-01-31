@@ -6,32 +6,6 @@
   font-size: 1rem;
 }
 
-.fetch-error-title{
-  display: flex;
-  align-items: end;
-  text-align: center;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.fetch-error-title > h2{
-  font-weight: 700;
-  font-size: 5em;
-  font-family: var(--font-family-primary),sans-serif;
-}
-
-.fetch-error-title > h2 > span{
-  color: var(--red-primary);
-}
-
-.fetch-error-title > span{
-  font-weight: 500;
-  font-size: 3em;
-  position: relative;
-  bottom: 16px;
-  margin-left: 1rem;
-}
-
 .fetch-error-status{
   font-size: 1.5em;
   text-decoration: underline;
@@ -56,15 +30,19 @@
   .fetch-error-wrapper{
     font-size: 12px;
   }
+
+  .fetch-error-message{
+    font-size: 11px;
+  }
 }
 
 @media only screen and (max-width:500px){
   .fetch-error-wrapper{
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .fetch-error-message{
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .fetch-error-title span{

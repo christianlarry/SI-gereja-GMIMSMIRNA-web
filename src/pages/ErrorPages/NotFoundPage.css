@@ -1,0 +1,35 @@
+.not-found-page-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.not-found-page-status{
+  font-size: 1.6em;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.not-found-page-message{
+  font-size: 0.85em;
+}
+
+.not-found-page-homelink{
+  color: var(--red-primary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.not-found-page-homelink:hover{
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1000px){
+  .not-found-page-wrapper{font-size: 1rem;}
+}
+
+@media only screen and (max-width: 600px){
+  .not-found-page-wrapper{font-size: 0.8rem;}
+}

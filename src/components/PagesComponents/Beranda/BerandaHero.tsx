@@ -45,7 +45,7 @@ const BerandaHero = () => {
                   </Link>
                 </Button>
                 <Button tabIndex={-1}>
-                  <Link to="/ibadahminggu"><i><FontAwesomeIcon icon={faChurch}/></i>Ibadah Minggu</Link>
+                  <Link to="/ibadah-gereja"><i><FontAwesomeIcon icon={faChurch}/></i>Ibadah Gereja</Link>
                 </Button>
                 <Button tabIndex={-1}>
                   <Link to="/pembangunan"><i><FontAwesomeIcon icon={faTrowel}/></i>Pembangunan</Link>

@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios"
 
 // DATA MODEL IMPORT 
-import { BeritaResponseModel, KategoriBeritaResponseModel } from "../interfaces/api/BeritaModel"
+import { BeritaResponseModel, KategoriBeritaResponseModel, SingleBeritaResponseModel } from "../interfaces/api/BeritaModel"
 import DataCountResponseModel from "../interfaces/api/DataCountResponseModel"
 import { KolomResponseModel } from "../interfaces/api/KolomModel"
 import { KomisiKategorialResponseModel } from "../interfaces/api/KomisiKategorialModel"
@@ -36,7 +36,11 @@ export const blankThumbnailUrl: string = '/images/no_berita_thumbnail.jpg'
 export const getBerita = (query?:string,config?:SWRConfiguration) => useSWR<BeritaResponseModel>(
   `berita${query ? '?' + query : ''}`, 
   fetcher, 
-  config);
+  config)
+export const getBeritaById = (id:number,config?:SWRConfiguration) => useSWR<SingleBeritaResponseModel>(
+  `berita/${id}`, 
+  fetcher, 
+  config)
 export const getKategoriBerita = (config?:SWRConfiguration) => useSWR<KategoriBeritaResponseModel>(
   'berita/kategori', 
   fetcher, 

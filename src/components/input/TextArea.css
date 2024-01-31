@@ -1,0 +1,23 @@
+.textarea{
+  border: none;
+  padding: 14px 12px;
+  outline: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: 1px solid var(--black-a06);
+  width: 100%;
+  font-size: 14px;
+  font-family: var(--font-family-secondary);
+  resize: vertical;
+}
+
+@media only screen and (max-width: 1000px){
+  .textarea{
+    padding: 10px 8px;
+    font-size: 13px;
+    height: 45px;
+  }
+}

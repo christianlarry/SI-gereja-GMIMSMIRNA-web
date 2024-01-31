@@ -84,9 +84,10 @@
   }
 
   .berita-card-data{
-    font-size: 11px;
+    font-size: 12px;
     flex-direction: column;
     gap: 0;
+    padding-bottom: 0;
   }
 
   .berita-card{

@@ -9,15 +9,15 @@ import { BeritaModel } from '../../interfaces/api/BeritaModel'
 import { blankThumbnailUrl } from '../../services/api'
 import { faBookOpenReader } from '@fortawesome/free-solid-svg-icons'
 
-interface NewsCardProps{
+interface NewsCardProps extends React.HTMLAttributes<HTMLDivElement>{
   berita:BeritaModel
 }
 
-const NewsCard = ({berita}:NewsCardProps) => {
+const NewsCard = ({berita,className,...props}:NewsCardProps) => {
   const postDate = new Date(berita.post_date)
 
   return (
-    <div className="berita-card">
+    <div className={`berita-card${className?' '+className:''}`} {...props}>
       <div className="berita-card-image-wrapper">
         <img src={berita.thumb_url || blankThumbnailUrl} alt={`Thumbnail berita ${berita.news_title}`} loading="lazy" className="berita-card-image" />
       </div>

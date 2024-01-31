@@ -1,0 +1,84 @@
+.detail-berita-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#detail-berita .share-berita{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#detail-berita .share-berita-links{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#detail-berita .share-berita-links i{
+  color: var(--red-primary);
+}
+
+#detail-berita .share-berita-links li{
+  width: 35px;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--black-a06);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+#detail-berita .share-berita-kategori{
+  font-size: 14px;
+  margin-right: 5px;
+  color: var(--text-gray);
+}
+
+#detail-berita .share-berita-kategori:hover{
+  color: var(--red-primary);
+}
+
+#detail-berita-comment{
+  padding: 1.5rem 1.5rem;
+  border: 1px solid var(--black-a06);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#detail-berita-comment > .add-comment-form{
+  margin-top: 1rem;
+}
+
+#detail-berita-comment .comment-character{
+  font-size: 14px;
+}
+
+#detail-berita-comment .comment-input-nama-group{
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+#detail-berita-comment .comment-input-group{
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 500px){
+  #detail-berita-comment .comment-character{
+    font-size: 12px;
+  }
+
+  #detail-berita-comment .comment-input-nama-group{
+    width: 100%;
+  }
+}

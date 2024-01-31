@@ -6,7 +6,7 @@ import SectionTitleSep from '../../section/SectionTitleSep'
 import Button from '../../button/Button'
 import SlideReveal from '../../reveal/SlideReveal'
 import FadeReveal from '../../reveal/FadeReveal'
-import BeritaMain from './BeritaMain'
+import BeritaSectionMain from './BeritaSectionMain'
 
 const BeritaSection = () => (
   <section>
@@ -25,7 +25,7 @@ const BeritaSection = () => (
 
       <div className="berita-main-container">
         <SlideReveal direction='y' translateFrom={50} className='w-full'>
-          <BeritaMain/>
+          <BeritaSectionMain/>
         </SlideReveal>
       </div>
 

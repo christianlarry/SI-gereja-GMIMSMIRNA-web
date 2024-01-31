@@ -25,6 +25,10 @@ export interface BeritaResponseModel extends SmirnaApiResponseModel{
   data: BeritaModel[]
 }
 
+export interface SingleBeritaResponseModel extends SmirnaApiResponseModel{
+  data: BeritaModel
+}
+
 export interface KategoriBeritaResponseModel extends SmirnaApiResponseModel{
   data: KategoriBeritaModel[]
 }

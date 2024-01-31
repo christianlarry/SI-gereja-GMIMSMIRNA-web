@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import {lazy} from 'react'
 
-// PAGES/COMPONENTS/LAYOUT
+// PAGES/COMPONENTS
 const Beranda = lazy(()=>import('./pages/Beranda'))
 const TentangGereja = lazy(()=>import('./pages/TentangGereja'))
 const SejarahGereja = lazy(()=>import('./pages/SejarahGereja'))
@@ -14,10 +14,18 @@ const PP_Kompelka = lazy(()=>import('./pages/PerangkatPelayanan/Kompelka'))
 const PP_KomisiKerja = lazy(()=>import('./pages/PerangkatPelayanan/KomisiKerja'))
 const PP_RayonPemudaAnak = lazy(()=>import('./pages/PerangkatPelayanan/RayonPemudaAnak'))
 const Berita = lazy(()=>import('./pages/Berita'))
+const DetailBerita = lazy(()=>import('./pages/Berita/DetailBerita'))
 
+// ERROR PAGE
+const NotFoundPage = lazy(()=>import('./pages/ErrorPages/NotFoundPage'))
+
+// LAYOUT
 import LayoutContainer from './components/layouts/LayoutContainer'
-import LayoutBeranda from './components/layouts/LayoutBeranda'
+import LayoutBeranda from './components/layouts/pageLayouts/LayoutBeranda'
 import LayoutMain from './components/layouts/LayoutMain'
+// LAZY LAYOUT
+const LayoutPerangkatPelayanan = lazy(()=>import('./components/layouts/pageLayouts/LayoutPerangkatPelayanan'))
+const LayoutBerita = lazy(()=>import('./components/layouts/pageLayouts/LayoutBerita'))
 
 // STYLES
 import './styles/smirnaVariable.css'
@@ -52,7 +60,8 @@ function App() {
 					<Route element={<LayoutMain/>}>
 						<Route path='tentang-gereja' element={<TentangGereja/>}/>
 						<Route path='sejarah-gereja' element={<SejarahGereja/>}/>
-						<Route path='perangkat-pelayanan' element={<PerangkatPelayanan/>}>
+						<Route path='perangkat-pelayanan' element={<LayoutPerangkatPelayanan/>}>
+							<Route path='' element={<PerangkatPelayanan/>}/>
 							<Route path='penasihat-bpmj' element={<PP_PenasihatBpmj/>}/>
 							<Route path='bpmj' element={<PP_Bpmj/>}/>
 							<Route path='kolom' element={<PP_Kolom/>}/>
@@ -61,11 +70,15 @@ function App() {
 							<Route path='rayon-pemuda-remaja-anak' element={<PP_RayonPemudaAnak/>}/>
 						</Route>
 						<Route path='data-jemaat' element={<DataJemaat/>}/>
-						<Route path='berita' element={<Berita/>}/>
+						<Route path='berita' element={<LayoutBerita/>}>
+							<Route path='' element={<Berita/>}/>
+							<Route path=':id' element={<DetailBerita/>}/>
+						</Route>
+						
+						<Route path='/*' element={<NotFoundPage />}/>
 					</Route>
 				</Route>
 				<Route path='/beranda' element={<Navigate to={'/'}/>}/>
-				<Route path='/*' element={<h1>Not Found Page</h1>}/>
 			</Routes>
 		</Router>
 		)
