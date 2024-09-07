@@ -1,4 +1,4 @@
-import Button from "../../button/Button"
+import Button from "../../ui/Button/Button"
 
 interface Props{
   kategori:string

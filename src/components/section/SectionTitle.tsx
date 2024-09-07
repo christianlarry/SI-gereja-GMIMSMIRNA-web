@@ -5,7 +5,7 @@ interface SectionTitleProps extends React.HTMLAttributes<HTMLParagraphElement>{
   /**
    * default lg
    */
-  size:'lg'|'md'|'sm'
+  size?:'lg'|'md'|'sm'
 }
 
 const SectionTitle = ({text,size='lg',className,...props}:SectionTitleProps)=>(

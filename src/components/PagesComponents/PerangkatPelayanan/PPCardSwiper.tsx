@@ -2,7 +2,7 @@ import './PPCardSwiper.css'
 
 import { SwiperSlide,Swiper } from "swiper/react"
 import { Pagination } from 'swiper/modules'
-import ProfileCard from "../../card/ProfileCard"
+import ProfileCard from "../../ui/Card/ProfileCard"
 import KomisiKategorialModel from "../../../interfaces/api/KomisiKategorialModel"
 import { hashString } from "../../../utils/hashString"
 import KomisiKerjaModel from '../../../interfaces/api/KomisiKerjaModel'

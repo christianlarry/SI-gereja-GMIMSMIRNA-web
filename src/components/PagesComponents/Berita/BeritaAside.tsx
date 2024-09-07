@@ -6,10 +6,10 @@ import AsideTitle from "../../../components/aside/AsideTitle"
 import AsidePopulerBeritaList from "../../../components/PagesComponents/Berita/AsidePopulerBeritaList"
 import ErrorText from "../../../components/error/ErrorText"
 
-import InputText from "../../../components/input/InputText"
+import InputText from "../../ui/Input/InputText"
 import { getKategoriBerita } from "../../../services/api"
 import { Link, useLocation, useNavigate } from "react-router-dom"
-import DataLoader from "../../loader/DataLoader"
+import DataLoader from "../../ui/Loader/DataLoader"
 import { useEffect, useRef } from "react"
 
 interface BeritaAsideProps{

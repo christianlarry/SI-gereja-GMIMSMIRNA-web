@@ -31,7 +31,7 @@ const PengumumanSwiper = () => {
     mutate()
       .then(val=>{
         if(val && val.data.length === 0) return toastError('Belum ada pengumuman yang diposting')
-        toastError('Terjadi kesalahan saat mendapatkan data')
+        if(!val) toastError('Terjadi kesalahan saat mendapatkan data')
       })
       .catch(()=>toastError('Terjadi kesalahan saat mendapatkan data'))
   }

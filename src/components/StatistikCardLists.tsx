@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPerson, faPeopleRoof, faTableCells } from '@fortawesome/free-solid-svg-icons'
-import Card from './card/Card'
+import Card from './ui/Card/Card'
 import { getTotalAnggotaJemaat, getTotalKeluarga, getTotalKolom } from '../services/api'
 import SectionTitle from "./section/SectionTitle"
 
 import './StatistikCardLists.css'
-import DataLoader from './loader/DataLoader'
+import DataLoader from './ui/Loader/DataLoader'
 import ErrorText from './error/ErrorText'
 
 const StatistikCardLists = () => {

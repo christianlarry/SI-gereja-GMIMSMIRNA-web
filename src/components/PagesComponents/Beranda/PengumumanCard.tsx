@@ -10,8 +10,8 @@ import ModalHeader from '../../modal/ModalHeader'
 import ModalContent from '../../modal/ModalContent'
 import ModalHeaderTitle from '../../modal/ModalHeaderTitle'
 import ModalHeaderSubtitle from '../../modal/ModalHeaderSubtitle'
-import Paragraph from '../../Paragraph'
-import UnderlineTextButton from '../../button/UnderlineTextButton'
+import Paragraph from '../../ui/Text/Paragraph'
+import UnderlineTextButton from '../../ui/Button/UnderlineTextButton'
 import { AnimatePresence } from 'framer-motion'
 
 interface PengumumanCardProps{

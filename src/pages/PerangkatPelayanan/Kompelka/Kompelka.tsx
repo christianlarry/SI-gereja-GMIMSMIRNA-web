@@ -1,5 +1,3 @@
-import { useTitleHeader } from "../../../components/titleHeader/TitleHeaderContext"
-
 import { useEffect, useState } from "react"
 import { MappedKomisiKategorialModel } from "../../../interfaces/api/KomisiKategorialModel"
 import ErrorText from "../../../components/error/ErrorText"
@@ -10,6 +8,7 @@ import KomisiSwiperSectionContainer from "../../../components/PagesComponents/Pe
 import { capitalizeText } from "../../../utils/stringFormat"
 import usePerangkatPelayanan from "../../../hooks/usePerangkatPelayanan"
 import FadeReveal from "../../../components/reveal/FadeReveal"
+import useTitleHeader from "../../../hooks/useTitleHeader"
 
 const Kompelka = ()=>{
 

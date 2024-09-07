@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { BeritaContext } from "../components/layouts/pageLayouts/LayoutBerita";
+import { BeritaContext } from "../layouts/PageLayouts/LayoutBerita";
 
 const useBerita = ()=>{
   const context = useContext(BeritaContext);

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import ProgressBar from '../progressbar/ProgressBar'
+import ProgressBar from '../ProgressBar/ProgressBar'
 import './ProgressBarChartItem.css'
-import Button from '../button/Button'
+import Button from '../Button/Button'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement>{
   targetData:number

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import PengurusRayonModel, { MappedPengurusRayonModel } from "../../../interfaces/api/PengurusRayonModel"
-import MainAsideContainer from "../../../components/layouts/MainAsideContainer"
+import MainAsideContainer from "../../../layouts/Containers/MainAsideContainer"
 import Aside from "../../../components/aside/Aside"
 import AsideSection from "../../../components/aside/AsideSection"
-import DataLoader from "../../../components/loader/DataLoader"
+import DataLoader from "../../../components/ui/Loader/DataLoader"
 import ErrorText from "../../../components/error/ErrorText"
 import { capitalizeText } from "../../../utils/stringFormat"
 import AsideTitle from "../../../components/aside/AsideTitle"
@@ -12,13 +12,13 @@ import AsideLinkLists, { AsideLinkListsItem } from "../../../components/aside/As
 import './RayonPemudaAnak.css'
 import SectionTitle from "../../../components/section/SectionTitle"
 import SectionTitleSep from "../../../components/section/SectionTitleSep"
-import ProfileCard from "../../../components/card/ProfileCard"
+import ProfileCard from "../../../components/ui/Card/ProfileCard"
 import SectionSubtitle from "../../../components/section/SectionSubtitle"
-import { useTitleHeader } from "../../../components/titleHeader/TitleHeaderContext"
 import usePerangkatPelayanan from "../../../hooks/usePerangkatPelayanan"
 import { useLocation } from "react-router-dom"
 import FadeReveal from "../../../components/reveal/FadeReveal"
 import { motion, useAnimationControls } from "framer-motion"
+import useTitleHeader from "../../../hooks/useTitleHeader"
 
 const RayonPemudaAnak = ()=>{
 
@@ -110,7 +110,7 @@ const RayonPemudaAnak = ()=>{
             <main>
               <div  className="pp_rayon-section-container">
                 <section className="pp_rayon-section">
-                  <SectionTitle text="Pengurus Rayon Pemuda Remaja"/>
+                  <SectionTitle size="lg" text="Pengurus Rayon Pemuda Remaja"/>
                   <motion.div animate={animateControls}>
                     <SectionSubtitle text={selectedPengurusRayon[0].rayon.split('-').join(' ')}/>
                   </motion.div>
@@ -128,7 +128,7 @@ const RayonPemudaAnak = ()=>{
                   </motion.div>
                 </section>
                 <section className="pp_rayon-section">
-                  <SectionTitle text="Pengurus Rayon Anak"/>
+                  <SectionTitle size="lg" text="Pengurus Rayon Anak"/>
                   <SectionSubtitle text={selectedPengurusRayon[0].rayon.split('-').join(' ')}/>
                   <SectionTitleSep/>
                   <div className="pp_rayon-card-container">

@@ -1,21 +1,21 @@
 import Pagination from "../../components/pagination/Pagination"
-import NewsCard from "../../components/card/NewsCard"
+import NewsCard from "../../components/ui/Card/NewsCard"
 import DataNotFound from "../../components/error/DataNotFound"
 import InternalServerError from "../../components/error/InternalServerError"
-import DataLoader from "../../components/loader/DataLoader"
+import DataLoader from "../../components/ui/Loader/DataLoader"
 import handleRefreshBerita from "../../services/handleRefreshBerita"
 import './Berita.css'
 
 import { useNavigate, useLocation } from "react-router-dom"
 import { useEffect, useState } from "react"
 
-import { useTitleHeader } from "../../components/titleHeader/TitleHeaderContext"
 import { motion, useAnimationControls } from "framer-motion"
 
 // IMPORT FETCH FUNCTIONS
 import { getBerita } from "../../services/api"
 import { isAxiosError } from "axios"
 import useBerita from "../../hooks/useBerita"
+import useTitleHeader from "../../hooks/useTitleHeader"
 
 const Berita = () => {
   // * STATE

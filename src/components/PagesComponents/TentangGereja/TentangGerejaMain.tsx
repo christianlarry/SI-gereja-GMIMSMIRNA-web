@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom"
-import Paragraph from "../../Paragraph"
+import Paragraph from "../../ui/Text/Paragraph"
 import StatistikCardLists from "../../StatistikCardLists"
-import Button from "../../button/Button"
+import Button from "../../ui/Button/Button"
 import SectionSubtitle from "../../section/SectionSubtitle"
 import SectionTitle from "../../section/SectionTitle"
 import SectionTitleSep from "../../section/SectionTitleSep"
 
 import './TentangGerejaMain.css'
-import UnderlineTextButton from "../../button/UnderlineTextButton"
+import UnderlineTextButton from "../../ui/Button/UnderlineTextButton"
 
 const MainContent = () => {
   return (

@@ -1,5 +1,5 @@
 import {useState, useRef, forwardRef, useEffect} from 'react'
-import BurgerButton from '../button/BurgerButton'
+import BurgerButton from '../ui/Button/BurgerButton'
 import './Navbar.css'
 import HeaderSearchBox from './HeaderSearchBox'
 import navigationLinks from '../../data/smirnaNavigationLink.json'

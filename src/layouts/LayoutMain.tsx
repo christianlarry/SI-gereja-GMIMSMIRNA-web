@@ -1,14 +1,14 @@
 import { Outlet } from "react-router-dom"
-import GoTopButton from "../button/GoTopButton"
-import Footer from "../footer/Footer"
-import Header from "../header/Header"
+import GoTopButton from "../components/ui/Button/GoTopButton"
+import Footer from "../components/footer/Footer"
+import Header from "../components/header/Header"
 import { Suspense } from "react"
 
 import './LayoutMain.css'
-import TitleHeader from "../titleHeader/TitleHeader"
-import { TitleHeaderProvider } from "../titleHeader/TitleHeaderContext"
-import DataLoader from "../loader/DataLoader"
-import FadeReveal from "../reveal/FadeReveal"
+import TitleHeader from "../components/titleHeader/TitleHeader"
+import { TitleHeaderProvider } from "../components/titleHeader/TitleHeaderContext"
+import DataLoader from "../components/ui/Loader/DataLoader"
+import FadeReveal from "../components/reveal/FadeReveal"
 
 const LayoutMainSuspenseFallback = ()=>(
   <div className="layout-main-suspense-fallback">

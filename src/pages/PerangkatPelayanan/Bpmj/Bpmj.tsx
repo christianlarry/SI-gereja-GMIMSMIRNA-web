@@ -1,4 +1,4 @@
-import ProfileCard from "../../../components/card/ProfileCard"
+import ProfileCard from "../../../components/ui/Card/ProfileCard"
 import FadeReveal from "../../../components/reveal/FadeReveal"
 
 const Bpmj = () => (

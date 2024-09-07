@@ -1,8 +1,8 @@
 import { Link, useLocation } from 'react-router-dom'
 import './TitleHeader.css'
 import { useEffect } from 'react'
-import { useTitleHeader } from './TitleHeaderContext'
 import { motion,useAnimationControls } from 'framer-motion'
+import useTitleHeader from '../../hooks/useTitleHeader'
 
 const TitleHeader = ()=>{
 

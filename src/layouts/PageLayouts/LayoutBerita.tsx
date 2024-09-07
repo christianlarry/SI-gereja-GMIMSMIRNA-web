@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
-import BeritaAside from "../../PagesComponents/Berita/BeritaAside"
-import MainAsideContainer from "../MainAsideContainer"
+import BeritaAside from "../../components/PagesComponents/Berita/BeritaAside"
+import MainAsideContainer from "../Containers/MainAsideContainer"
 import { Suspense, createContext, useState } from "react"
 
 interface BeritaContextType{

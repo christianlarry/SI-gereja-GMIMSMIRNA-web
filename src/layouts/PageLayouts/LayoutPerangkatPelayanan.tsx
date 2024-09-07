@@ -1,17 +1,17 @@
 import { Outlet } from "react-router-dom"
-import SecondaryNavbar from "../../../components/navbar/SecondaryNavbar"
-import smirnaNavDropdowns from '../../../data/getNavigationDropdowns'
+import SecondaryNavbar from "../../components/navbar/SecondaryNavbar"
+import smirnaNavDropdowns from '../../data/getNavigationDropdowns'
 import { Suspense, createContext } from "react"
-import DataLoader from "../../../components/loader/DataLoader"
+import DataLoader from "../../components/ui/Loader/DataLoader"
 import { SWRResponse } from "swr"
 
-import { getKolom, getKomisiKerja, getKompelka, getPengurusRayon } from "../../../services/api"
+import { getKolom, getKomisiKerja, getKompelka, getPengurusRayon } from "../../services/api"
 
-import { KolomResponseModel } from "../../../interfaces/api/KolomModel"
-import { KomisiKategorialResponseModel } from "../../../interfaces/api/KomisiKategorialModel"
-import { KomisiKerjaResponseModel } from "../../../interfaces/api/KomisiKerjaModel"
-import { PengurusRayonResponseModel } from "../../../interfaces/api/PengurusRayonModel"
-import FadeReveal from "../../../components/reveal/FadeReveal"
+import { KolomResponseModel } from "../../interfaces/api/KolomModel"
+import { KomisiKategorialResponseModel } from "../../interfaces/api/KomisiKategorialModel"
+import { KomisiKerjaResponseModel } from "../../interfaces/api/KomisiKerjaModel"
+import { PengurusRayonResponseModel } from "../../interfaces/api/PengurusRayonModel"
+import FadeReveal from "../../components/reveal/FadeReveal"
 
 interface PerangkatPelayananContextType{
   kolom:SWRResponse<KolomResponseModel,any,any>

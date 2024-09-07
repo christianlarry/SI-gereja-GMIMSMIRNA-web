@@ -1,23 +1,23 @@
 import UpkTable from "../../../components/PagesComponents/PerangkatPelayanan/Kolom/UpkTable"
 import Aside from "../../../components/aside/Aside"
 import AsideSection from "../../../components/aside/AsideSection"
-import MainAsideContainer from "../../../components/layouts/MainAsideContainer"
+import MainAsideContainer from "../../../layouts/Containers/MainAsideContainer"
 import SectionTitle from "../../../components/section/SectionTitle"
 import SectionTitleSep from "../../../components/section/SectionTitleSep"
 
 import './Kolom.css'
-import DataLoader from "../../../components/loader/DataLoader"
+import DataLoader from "../../../components/ui/Loader/DataLoader"
 import ErrorText from "../../../components/error/ErrorText"
 import { useEffect, useState } from "react"
 import { KolomModel } from "../../../interfaces/api/KolomModel"
-import ProfileCard from "../../../components/card/ProfileCard"
-import { useTitleHeader } from "../../../components/titleHeader/TitleHeaderContext"
+import ProfileCard from "../../../components/ui/Card/ProfileCard"
 import AsideLinkLists, { AsideLinkListsItem } from "../../../components/aside/AsideLinkLists"
 import AsideTitle from "../../../components/aside/AsideTitle"
 import usePerangkatPelayanan from "../../../hooks/usePerangkatPelayanan"
 import { useLocation } from "react-router-dom"
 import FadeReveal from "../../../components/reveal/FadeReveal"
 import { motion, useAnimationControls } from "framer-motion"
+import useTitleHeader from "../../../hooks/useTitleHeader"
 
 const Kolom = ()=>{
 

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 
 import {ToastContainer} from 'react-toastify'
 
-const LayoutContainer = ()=>{
+const AppContainer = ()=>{
   
   const location = useLocation()
   const [prevPath,setPrevPath] = useState<string>(location.pathname)
@@ -36,4 +36,4 @@ const LayoutContainer = ()=>{
   )
 }
 
-export default LayoutContainer
+export default AppContainer

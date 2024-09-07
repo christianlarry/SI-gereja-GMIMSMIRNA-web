@@ -1,4 +1,4 @@
-import { blankProfilePictureUrl } from '../../services/api'
+import { blankProfilePictureUrl } from '../../../services/api'
 import './ProfileCard.css'
 
 interface ProfileCardProps extends React.HTMLAttributes<HTMLDivElement>{

@@ -4,6 +4,7 @@ import StrukturBpmjSection from "../../components/PagesComponents/Beranda/Strukt
 import TentangGerejaSection from "../../components/PagesComponents/Beranda/TentangGerejaSection"
 
 const Beranda = () => {
+
 	return (
 		<main>
 			<PengumumanSection />

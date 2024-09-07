@@ -1,8 +1,8 @@
-import Paragraph from "../../Paragraph"
+import Paragraph from "../../ui/Text/Paragraph"
 import SectionSubtitle from "../../section/SectionSubtitle"
 import SectionTitle from "../../section/SectionTitle"
 import SectionTitleSep from "../../section/SectionTitleSep"
-import Button from "../../button/Button"
+import Button from "../../ui/Button/Button"
 import { Link } from "react-router-dom"
 
 import './TentangGerejaSection.css'

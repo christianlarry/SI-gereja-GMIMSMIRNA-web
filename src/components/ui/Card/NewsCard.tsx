@@ -1,12 +1,12 @@
 import './NewsCard.css'
-import UnderlineTextButton from '../button/UnderlineTextButton'
+import UnderlineTextButton from '../../ui/Button/UnderlineTextButton'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock, faUser } from '@fortawesome/free-regular-svg-icons'
-import Paragraph from '../Paragraph'
-import { shortMonth, zeroPad } from '../../utils/dateTimeFormat'
-import { BeritaModel } from '../../interfaces/api/BeritaModel'
-import { blankThumbnailUrl } from '../../services/api'
+import Paragraph from '../Text/Paragraph'
+import { shortMonth, zeroPad } from '../../../utils/dateTimeFormat'
+import { BeritaModel } from '../../../interfaces/api/BeritaModel'
+import { blankThumbnailUrl } from '../../../services/api'
 import { faBookOpenReader } from '@fortawesome/free-solid-svg-icons'
 
 interface NewsCardProps extends React.HTMLAttributes<HTMLDivElement>{

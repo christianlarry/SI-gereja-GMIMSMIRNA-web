@@ -1,7 +1,7 @@
 import AsideArticleCard from '../../aside/AsideArticleCard'
 import './AsidePopulerBeritaList.css'
 import { shortMonth, zeroPad } from '../../../utils/dateTimeFormat'
-import DataLoader from '../../loader/DataLoader'
+import DataLoader from '../../ui/Loader/DataLoader'
 import ErrorText from '../../error/ErrorText'
 
 // IMPORT FETCH FUNCTIONS

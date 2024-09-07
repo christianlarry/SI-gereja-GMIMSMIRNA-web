@@ -1,5 +1,9 @@
 {
   "name": "smirna-frontend",
+  "author": {
+    "name": "Christian Larry Jo Rondonuwu",
+    "email": "christianlarry03@gmail.com"
+  },
   "private": true,
   "version": "0.0.1",
   "type": "module",

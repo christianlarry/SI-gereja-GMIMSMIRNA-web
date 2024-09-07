@@ -1,6 +1,6 @@
-import NewsCard from '../../card/NewsCard'
+import NewsCard from '../../ui/Card/NewsCard'
 import DataNotFound from '../../error/DataNotFound'
-import DataLoader from '../../loader/DataLoader'
+import DataLoader from '../../ui/Loader/DataLoader'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { SwiperOptions } from 'swiper/types'
 import { Pagination } from 'swiper/modules'

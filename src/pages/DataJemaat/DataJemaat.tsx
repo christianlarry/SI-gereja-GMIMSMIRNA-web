@@ -1,12 +1,12 @@
-import PieChart from "../../components/chart/PieChart"
+import PieChart from "../../components/ui/Chart/PieChart"
 import FadeReveal from "../../components/reveal/FadeReveal"
 import { getStatistikAnggotaJemaat } from "../../services/api"
 import InternalServerError from "../../components/error/InternalServerError"
-import DataLoader from "../../components/loader/DataLoader"
+import DataLoader from "../../components/ui/Loader/DataLoader"
 import StatistikCardLists from "../../components/StatistikCardLists"
 
 import './DataJemaat.css'
-import ProgressBarChartItem from "../../components/chart/ProgressBarChartItem"
+import ProgressBarChartItem from "../../components/ui/Chart/ProgressBarChartItem"
 import BipraStatistik from "../../components/PagesComponents/DataJemaat/BipraStatistik"
 
 const DataJemaat = () => {

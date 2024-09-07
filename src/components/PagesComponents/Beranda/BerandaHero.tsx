@@ -1,8 +1,8 @@
-import Button from '../../button/Button'
+import Button from '../../ui/Button/Button'
 import './BerandaHero.css'
 import HeroSwiper from './HeroSwiper'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faNewspaper,faChurch,faTrowel,faImage} from '@fortawesome/free-solid-svg-icons'
+import {faNewspaper,faChurch,faImage} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import SlideReveal from '../../reveal/SlideReveal'
@@ -46,9 +46,6 @@ const BerandaHero = () => {
                 </Button>
                 <Button tabIndex={-1}>
                   <Link to="/ibadah-gereja"><i><FontAwesomeIcon icon={faChurch}/></i>Ibadah Gereja</Link>
-                </Button>
-                <Button tabIndex={-1}>
-                  <Link to="/pembangunan"><i><FontAwesomeIcon icon={faTrowel}/></i>Pembangunan</Link>
                 </Button>
                 <Button tabIndex={-1}>
                   <Link to="/galeri"><i><FontAwesomeIcon icon={faImage}/></i>Galeri</Link>
